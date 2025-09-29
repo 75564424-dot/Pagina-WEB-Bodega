@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clientes Frecuentes - Bodega</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ======================= -->
+  <!-- ENCABEZADO PRINCIPAL -->
+  <!-- ======================= -->
+  <header>
+    <h1>Clientes Frecuentes</h1>
+    <p>Conviértete en cliente frecuente y disfruta de beneficios exclusivos.</p>
+  </header>
+
+  <!-- ======================= -->
+  <!-- MENÚ DE NAVEGACIÓN -->
+  <!-- ======================= -->
+  <nav>
+    <ul>
+      <li><a href="main.html">Inicio</a></li>
+      <li><a href="publicidad.html">Publicidad</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="reportes.html" class="active">Reportes</a></li>
+      <li><a href="noticias.html">Noticias</a></li>
+      <li><a href="clientes.html">Clientes</a></li>
+      <li><a href="faq.html">Preguntas Frecuentes</a></li>
+      <li><a href="acerca.html">Acerca de</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="gestion.html">Gestión</a></li>
+      <li><a href="proveedores.html">Proveedores</a></li>
+    </ul>
+  </nav>
+
+  <!-- ======================= -->
+  <!-- CONTENIDO PRINCIPAL -->
+  <!-- ======================= -->
+  <main>
+    <!-- Beneficios de ser cliente frecuente -->
+    <section class="clientes-beneficios">
+      <h2>¿Por qué hacerte cliente frecuente?</h2>
+      <div class="grid">
+        <div class="card beneficio-card">
+          <h3>🎁 Puntos Acumulables</h3>
+          <p>Por cada compra acumulas puntos que puedes canjear por descuentos y productos especiales.</p>
+        </div>
+        <div class="card beneficio-card">
+          <h3>⭐ Promociones Exclusivas</h3>
+          <p>Acceso a ofertas que solo nuestros clientes frecuentes pueden disfrutar.</p>
+        </div>
+        <div class="card beneficio-card">
+          <h3>🚀 Atención Personalizada</h3>
+          <p>Recibe notificaciones y recomendaciones según tus gustos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulario de registro de clientes -->
+    <section class="clientes-formulario">
+      <h2>Regístrate y empieza a acumular puntos</h2>
+      <!-- Método POST solo para enviar datos; acción '#' indica placeholder -->
+      <form action="#" method="post">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono">
+
+        <label for="dni">DNI</label>
+        <input type="text" id="dni" name="dni" required>
+
+        <button type="submit" class="btn">Registrarme</button>
+      </form>
+    </section>
+
+    <!-- Llamado a la acción adicional -->
+    <section class="cta">
+      <h2>¿Ya eres cliente frecuente?</h2>
+      <p>Muy pronto habilitaremos el acceso para que consultes tus puntos y promociones personalizadas.</p>
+      <a href="#" class="btn-secundario">Próximamente</a>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Bodega El Ahorro - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proveedores - Bodega</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ========================= -->
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <!-- ========================= -->
+    <nav>
+        <ul>
+            <li><a href="main.html">Inicio</a></li>
+            <li><a href="publicidad.html">Publicidad</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="reportes.html" class="active">Reportes</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="clientes.html">Clientes</a></li>
+            <li><a href="faq.html">Preguntas Frecuentes</a></li>
+            <li><a href="acerca.html">Acerca de</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="gestion.html">Gestión</a></li>
+            <li><a href="proveedores.html">Proveedores</a></li>
+        </ul>
+    </nav>
+
+    <!-- ========================= -->
+    <!-- CONTENIDO PRINCIPAL -->
+    <!-- ========================= -->
+    <main class="contenedor">
+        <!-- Hero / Cabecera -->
+        <header class="hero hero-proveedores">
+            <h1>🤝 Únete como Proveedor</h1>
+            <p>Queremos trabajar contigo. Regístrate y forma parte de nuestra red de proveedores confiables.</p>
+        </header>
+
+        <!-- Beneficios para proveedores -->
+        <section class="beneficios-proveedores">
+            <h2>📦 Beneficios de ser proveedor</h2>
+            <ul>
+                <li>✔ Acceso a una amplia red de clientes en la zona.</li>
+                <li>✔ Pagos transparentes y puntuales.</li>
+                <li>✔ Relación comercial a largo plazo.</li>
+                <li>✔ Visibilidad en nuestras promociones y campañas.</li>
+            </ul>
+        </section>
+
+        <!-- Formulario de registro -->
+        <section class="formulario-proveedores">
+            <h2>📝 Formulario de Registro</h2>
+            <form>
+                <!-- Nombre de empresa -->
+                <label for="nombre">Nombre de la empresa:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ejemplo: Distribuidora ABC" required>
+
+                <!-- Rubro de productos -->
+                <label for="rubro">Rubro de productos:</label>
+                <input type="text" id="rubro" name="rubro" placeholder="Ejemplo: Bebidas, Abarrotes, Limpieza" required>
+
+                <!-- Persona de contacto -->
+                <label for="contacto">Persona de contacto:</label>
+                <input type="text" id="contacto" name="contacto" placeholder="Nombre completo" required>
+
+                <!-- Teléfono -->
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ejemplo: 987654321" required>
+
+                <!-- Correo -->
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" placeholder="empresa@correo.com" required>
+
+                <!-- Mensaje adicional -->
+                <label for="mensaje">Mensaje adicional:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos un poco más sobre tu empresa..."></textarea>
+
+                <!-- Botón de envío -->
+                <button type="submit" class="btn-principal">Enviar Solicitud</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Bodega El Ahorro - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
