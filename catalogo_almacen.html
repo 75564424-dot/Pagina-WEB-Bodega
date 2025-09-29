@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo Almacén</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Catálogo de Productos - Almacén</h1>
+  </header>
+
+  <main>
+
+    <!-- Botón global para agregar producto -->
+    <div style="margin-bottom: 1rem; text-align: center;">
+      <a href="catalogo_create.html" class="btn-principal">➕ Agregar nuevo producto</a>
+    </div>
+
+    <!-- ======================= -->
+    <!-- CATEGORÍA: BEBIDAS -->
+    <!-- ======================= -->
+    <section>
+      <h3>🥤 Bebidas</h3>
+      <div class="grid">
+
+        <!-- Producto -->
+        <article class="card producto-card">
+          <img src="imagenes/bebida.San.Luis.png" alt="Agua San Luis">
+          <h4>Agua San Luis 625ml</h4>
+          <p>Precio: <strong>S/ 1.50</strong></p>
+          <p class="stock disponible">Stock: Disponible</p>
+          <a href="carrito.html" class="btn-principal" style="margin-top:5px;">🛒 Agregar</a>
+          <div style="margin-top:10px">
+            <a href="catalogo_update.html" class="btn-secundario">✏️ Editar</a>
+            <a href="catalogo_delete.html" class="btn">🗑️ Eliminar</a>
+          </div>
+        </article>
+
+        <!-- Producto -->
+        <article class="card producto-card">
+          <img src="imagenes/bebida.Coca.Cola.png" alt="Coca Cola 1.5L">
+          <h4>Coca Cola 1.5L</h4>
+          <p>Precio: <strong>S/ 6.00</strong></p>
+          <p class="stock bajo">Stock: Bajo</p>
+          <a href="carrito.html" class="btn-principal" style="margin-top:5px;">🛒 Agregar</a>
+          <div style="margin-top:10px">
+            <a href="catalogo_update.html" class="btn-secundario">✏️ Editar</a>
+            <a href="catalogo_delete.html" class="btn">🗑️ Eliminar</a>
+          </div>
+        </article>
+
+        <!-- Producto -->
+        <article class="card producto-card">
+          <img src="imagenes/jugo.Gloria.Durazno.png" alt="Jugo Gloria Durazno">
+          <h4>Jugo Gloria Durazno 1L</h4>
+          <p>Precio: <strong>S/ 4.90</strong></p>
+          <p class="stock medio">Stock: Medio</p>
+          <a href="carrito.html" class="btn-principal" style="margin-top:5px;">🛒 Agregar</a>
+          <div style="margin-top:10px">
+            <a href="catalogo_update.html" class="btn-secundario">✏️ Editar</a>
+            <a href="catalogo_delete.html" class="btn">🗑️ Eliminar</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ======================= -->
+    <!-- MÁS CATEGORÍAS... -->
+    <!-- ======================= -->
+    <!-- Aquí repites la misma estructura para Limpieza, Snacks, etc. -->
+        <!-- ---------- BOTÓN VOLVER AL MENU ---------- -->
+        <div class="volver-login">
+            <a href="main.html" class="btn-secundario">🏠 Volver a la pagina principal</a>
+        </div>
+  </main>
+</body>
+</html>

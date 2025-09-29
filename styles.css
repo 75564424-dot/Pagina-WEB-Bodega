@@ -1,0 +1,430 @@
+/* =========================
+   1. Estilos Globales
+   ========================= */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        background: #f8f9fa;
+        color: #333;
+        line-height: 1.6;
+    }
+
+/* =========================
+   2. Etiquetas y Stock
+   ========================= */
+    .etiqueta, .stock {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 12px;
+        font-weight: bold;
+        font-size: 0.85rem;
+        color: white;
+        margin-top: 10px;
+        animation: pulse 2s infinite;
+    }
+
+/* Colores etiquetas */
+    .etiqueta.verde { background-color: #2a9d8f; }
+    .etiqueta.azul  { background-color: #0077b6; }
+    .etiqueta.rojo  { background-color: #b13533; }
+
+/* Colores stock */
+    .stock.disponible { background-color: #4CAF50; }
+    .stock.medio      { background-color: #FFA500; }
+    .stock.bajo       { background-color: #E53935; }
+    .producto-card p.stock { margin-top: 0.5rem; }
+
+/* =========================
+   3. Encabezado / Hero
+   ========================= */
+    header, .hero {
+        text-align: center;
+        padding: 2rem 1rem;
+        color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    header { background: linear-gradient(135deg, #0073e6, #00c6ff); }
+    .hero-publicidad { background: linear-gradient(135deg, #ff6f61, #ffb347); }
+    .hero-proveedores { background: linear-gradient(135deg, #2a9d8f, #38b000); }
+
+    header h1, .hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+
+/* =========================
+   4. Navegación
+   ========================= */
+    nav {
+        background: #004080;
+        padding: 0.8rem;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        background: #ffd700;
+        color: #004080;
+        transform: scale(1.05);
+    }
+
+/* =========================
+   5. Layout Principal
+   ========================= */
+    main {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 1rem;
+        animation: slideUp 0.8s ease;
+    }
+
+    h2 {
+        margin-bottom: 1rem;
+        color: #0073e6;
+    }
+
+/* =========================
+   6. Botones
+   ========================= */
+    button, .btn {
+        padding: 0.6rem 1.2rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    button, .btn { background: #0073e6; color: white; }
+    button:hover, .btn:hover { background: #005bb5; transform: translateY(-2px); }
+
+    .btn-principal {
+        display: inline-block;
+        padding: 12px 25px;
+        background: #ffd60a;
+        color: #000;
+        font-weight: bold;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    .btn-principal:hover { transform: scale(1.05); background: #ffc300; }
+
+    .btn-secundario {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #0077b6;
+        color: #fff;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+    }
+
+    .btn-secundario:hover { background: #023e8a; }
+
+/* =========================
+   7. Formularios
+   ========================= */
+/* Formato para formulario generales*/   
+    form { display: flex; flex-direction: column; gap: 1rem; }
+
+    input, textarea, select {
+        padding: 0.7rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: border 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    input:focus, textarea:focus, select:focus {
+        border: 1px solid #0073e6;
+        outline: none;
+        box-shadow: 0 0 6px rgba(0, 115, 230, 0.3);
+    }
+
+/* Formato para formularios administrativos */
+    .formulario-admin {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .formulario-admin h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #2a9d8f;
+    }
+
+    .formulario-admin p.info {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .formulario-admin label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .formulario-admin input,
+    .formulario-admin select,
+    .formulario-admin textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
+
+    .formulario-admin textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .formulario-admin .acciones {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+/* === ESTILO EXTRA SOLO PARA ADVERTENCIA === */
+    .advertencia {
+      background: #fff3cd; /* Amarillo suave */
+      color: #856404;      /* Texto marrón */
+      border: 1px solid #ffeeba;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .peligro {
+      background: #f8d7da; /* Rojo claro */
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+/* =========================
+   8. Tablas
+   ========================= */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    th, td { padding: 0.8rem; text-align: left; border-bottom: 1px solid #ddd; }
+    th { background: #0073e6; color: white; }
+
+/* =========================
+   9. Tarjetas y Grillas (Unificado)
+   ========================= */
+    .card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 1rem;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: fadeInUp 0.8s ease-in-out;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+/* Grillas */
+    .grid { 
+        display: grid; 
+        gap: 20px; 
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+/* =========================
+   10. Secciones especiales
+   ========================= */
+    .faq-container {
+        max-width: 750px;
+        margin: 2rem auto;
+        padding: 1.5rem;
+        background-color: #fff8f0;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    }
+
+    .faq-container details {
+        margin-bottom: 1rem;
+        border: 1px solid #ffe0d9;
+        border-radius: 10px;
+        padding: 0.8rem 1rem;
+        background-color: #fff4ee;
+        transition: all 0.3s ease;
+    }
+    .faq-container details[open] { 
+        background-color: #fff0e6; 
+        transform: scale(1.02); 
+    }
+    .faq-container summary { 
+        font-weight: 600; 
+        cursor: pointer; 
+        list-style: none; 
+        outline: none; 
+        color: #ff6f61; 
+        position: relative; 
+        padding-left: 1.5rem; 
+    }
+    .faq-container summary::before { 
+        content: "+"; 
+        position: absolute; 
+        left: 0; 
+        font-size: 1.2rem; 
+        transition: transform 0.3s ease; 
+    }
+    .faq-container details[open] summary::before { 
+        content: "−"; 
+        transform: rotate(180deg); }
+    .faq-container p { 
+        margin-top: 0.6rem; 
+        line-height: 1.5; 
+        color: #6a4c3b; 
+        font-size: 0.95rem; }
+
+    /* Tips en noticias */
+    .noticia-consejo {
+        margin-top: 15px;
+        padding: 12px;
+        background: #f0f9ff;
+        border-left: 5px solid #0077b6;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        color: #003049;
+        margin-bottom: 1.5rem;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+/* =========================
+   11. Dashboard / Reportes
+   ========================= */
+.dashboard-cards {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    margin: 2rem 0;
+}
+.dashboard-cards .card { text-align: center; }
+
+.stock-cards { display: flex; gap: 1rem; flex-wrap: wrap; }
+.stock-card { flex: 1; min-width: 200px; color: #fff; text-align: center; padding: 1rem; border-radius: 10px; }
+.stock-card.ok       { background-color: #4CAF50; }
+.stock-card.warning  { background-color: #FFA500; }
+.stock-card.critical { background-color: #E53935; }
+
+/* Ventas y Proveedores */
+.ventas-list, .proveedores-list { list-style: none; padding: 0; }
+.ventas-list li, .proveedores-list li { background: #fff; margin: 0.5rem 0; padding: 0.8rem; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
+.proveedores-list li { border-left: 4px solid #007BFF; background: #f9f9f9; }
+
+/* =========================
+   12. Animaciones
+   ========================= */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse { 0% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.05); opacity: 0.8; } 100% { transform: scale(1); opacity: 1; } }
+
+/* =========================
+   13. Footer
+   ========================= */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #004080;
+    color: white;
+    margin-top: 2rem;
+}
+
+/* =========================
+   14. Login
+   ========================= */
+.login-card {
+    max-width: 400px;
+    margin: 5rem auto;
+    text-align: center;
+}
+
+.login-card h2 {
+    margin-bottom: 1.5rem;
+    color: #004080;
+}
+
+.login-card .nota-login {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.volver-login {
+  text-align: left;
+  margin-top: 1.5rem; /* es para el estilo del boton, no sabia donde ponerlo */
+}
+
+/* =========================
+   15. Panel Usuario
+   ========================= */
+.user-card, .user-opciones {
+    margin: 1rem auto;
+    max-width: 600px;
+}
+
+.user-opciones ul {
+    list-style: none;
+    padding: 0;
+}
+
+.user-opciones li {
+    background: #f4f4f4;
+    margin: 0.5rem 0;
+    padding: 0.7rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.user-opciones li:hover {
+    background: #e0f0ff;
+}

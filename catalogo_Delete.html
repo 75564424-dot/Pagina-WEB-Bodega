@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eliminar producto - Bodega</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main>
+    <!-- ============================== -->
+    <!-- FORMULARIO DE ELIMINACIÓN      -->
+    <!-- ============================== -->
+    <section class="formulario-admin">
+      <h2>Eliminar producto</h2>
+      <p class="info">Estás a punto de eliminar un producto del sistema. Esta acción no se puede deshacer.</p>
+
+      <!-- Mensaje de advertencia -->
+      <div class="advertencia">
+        ⚠️ Revisa bien la información antes de continuar.
+      </div>
+      <div class="peligro">
+        ❌ Una vez eliminado, el producto desaparecerá del catálogo permanentemente.
+      </div>
+
+      <!-- Formulario de confirmación -->
+      <!-- Por ahora method="get" y action="#" -->
+      <form action="#" method="get">
+        
+        <!-- Campo de solo lectura con nombre del producto -->
+        <label for="producto">Producto a eliminar</label>
+        <input 
+          type="text" 
+          id="producto" 
+          name="producto" 
+          value="Coca Cola 1.5L" 
+          readonly
+        >
+        
+        <!-- Campo de solo lectura con proveedor -->
+        <label for="proveedor">Proveedor</label>
+        <input 
+          type="text" 
+          id="proveedor" 
+          name="proveedor" 
+          value="Coca Cola Company" 
+          readonly
+        >
+
+        <!-- Confirmación -->
+        <p class="info">¿Estás seguro de que deseas eliminar este producto?</p>
+
+        <!-- Acciones -->
+        <!-- Botón principal en color de advertencia -->
+        <!-- Botón secundario para volver sin eliminar -->
+        <div class="acciones">
+          <button type="submit" class="btn" style="background:#e63946; border:none;">
+            Eliminar definitivamente
+          </button>
+          <a href="catalogo_almacen.html" class="btn-secundario">Cancelar</a>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

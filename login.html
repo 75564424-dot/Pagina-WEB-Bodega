@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Bodega</title>
+  <!-- Vinculamos el archivo CSS para dar estilo coherente a toda la app -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ======================= -->
+  <!-- CONTENIDO PRINCIPAL -->
+  <!-- ======================= -->
+  <main class="contenedor">
+    <!-- Tarjeta para el login -->
+    <section class="card login-card">
+      <h2>🔐 Iniciar Sesión</h2>
+
+      <!-- 
+        Formulario de login:
+        - action: indica a qué página redirigir tras "enviar".
+        - method="get": por simplicidad, no hay lógica ni validación real.
+        Actualmente siempre lleva a "presentacion_user.html".
+      -->
+      <form action="presentacion_user.html" method="get">
+        <!-- Campo de texto para el usuario -->
+        <input type="text" name="usuario" placeholder="Usuario" required>
+        
+        <!-- Campo de contraseña -->
+        <input type="password" name="password" placeholder="Contraseña" required>
+        
+        <!-- Botón principal de acceso (usuario) -->
+        <button type="submit" class="btn">Ingresar</button>
+      </form>
+
+      <!-- Botón auxiliar (simulación de acceso admin) -->
+      <a href="presentacion_admin.html" class="btn btn-secundario">
+        Acceso Administrador
+      </a>
+
+      <!-- Nota explicativa -->
+      <p class="nota-login">
+        Acceso exclusivo para clientes y administradores
+      </p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Bodega El Ahorro - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>

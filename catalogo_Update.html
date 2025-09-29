@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar producto - Bodega</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main>
+    <!-- ======================= -->
+    <!-- FORMULARIO DE EDICIÓN   -->
+    <!-- ======================= -->
+    <section class="formulario-admin">
+      <h2>Editar producto</h2>
+      <p class="info">Aquí puedes actualizar la información de un producto ya registrado en el sistema.</p>
+
+      <!-- Formulario de actualización -->
+      <!-- Por ahora se usa method="get" y action="#" solo para pruebas -->
+      <!-- Cuando se implemente el backend cambiar a POST y la ruta real -->
+      <form action="#" method="get">
+        
+        <!-- Nombre del producto -->
+        <label for="nombre">Nombre del producto</label>
+        <input 
+          type="text" 
+          id="nombre" 
+          name="nombre" 
+          value="Agua mineral" 
+          required
+        >
+        
+        <!-- Precio -->
+        <label for="precio">Precio (S/.)</label>
+        <input 
+          type="number" 
+          id="precio" 
+          name="precio" 
+          step="0.01" 
+          value="2.50" 
+          required
+        >
+        
+        <!-- Stock -->
+        <label for="stock">Stock disponible</label>
+        <input 
+          type="number" 
+          id="stock" 
+          name="stock" 
+          value="50" 
+          required
+        >
+        
+        <!-- Proveedor -->
+        <label for="proveedor">Proveedor</label>
+        <select id="proveedor" name="proveedor" required>
+          <option value="coca_cola" selected>Coca Cola Company</option>
+          <option value="ajegroup">AJE Group</option>
+          <option value="pepsico">PepsiCo</option>
+        </select>
+        
+        <!-- Descripción -->
+        <label for="descripcion">Descripción</label>
+        <textarea 
+          id="descripcion" 
+          name="descripcion"
+        >Agua mineral sin gas, botella de 600 ml.</textarea>
+        
+        <!-- Imagen -->
+        <label for="imagen">Imagen actual</label>
+        <input 
+          type="file" 
+          id="imagen" 
+          name="imagen" 
+          accept="image/*"
+        >
+        <p class="info">Si no deseas cambiar la imagen, deja este campo vacío.</p>
+        
+        <!-- Acciones -->
+        <!-- Botón principal para guardar cambios -->
+        <!-- Botón secundario para volver sin guardar -->
+        <div class="acciones">
+          <button type="submit" class="btn-principal">Actualizar producto</button>
+          <a href="catalogo_almacen.html" class="btn-secundario">Cancelar</a>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
