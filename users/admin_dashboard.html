@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel del Administrador - Sistema de Ventas</title>
+
+  <!-- 🔗 Estilos generales y específicos -->
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="users.css">
+</head>
+
+<body class="dashboard-body">
+  <!-- =========================================================
+       🧭 ENCABEZADO DEL PANEL DE ADMINISTRADOR
+       Contiene título y menú principal.
+  ========================================================= -->
+  <header class="dashboard-header admin-header">
+    <h1 class="dashboard-title">Panel del Administrador</h1>
+    <nav class="dashboard-nav">
+      <ul class="dashboard-menu">
+        <li><a href="../views/index.html" class="dashboard-menu-link">Inicio</a></li>
+        <li><a href="../products/products_read.html" class="dashboard-menu-link">Inventario</a></li>
+        <li><a href="login_admin.html" class="dashboard-menu-link logout">Cerrar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- =========================================================
+       🧱 CONTENIDO PRINCIPAL DEL DASHBOARD
+       Contiene panel lateral, tarjetas y estadísticas.
+  ========================================================= -->
+  <main class="dashboard-layout">
+    
+    <!-- 👨‍💼 Panel lateral de administración -->
+    <aside class="dashboard-sidebar admin-sidebar animate-fade">
+      <img src="../assets/images/Bodega.png" alt="Foto del administrador" class="profile-avatar">
+      <h2 class="profile-name">Administrador General</h2>
+      <p class="profile-email">admin@sistemaventas.com</p>
+
+      <ul class="profile-actions">
+        <li><a href="../products/CRUD.html" class="profile-link">CRUD de productos</a></li>
+        <li><a href="../category/category_CRUD.html" class="profile-link">CRUD de categorias</a></li>
+        <li><a href="../inventory/inventory_adjust.html" class="profile-link">Reportes de entradas y salidas</a></li>
+        <li><a href="../category/category_stocks.html" class="profile-link">Gestionar stock por categorias</a></li>
+      </ul>
+    </aside>
+
+    <!-- 📊 Panel de información y control -->
+    <section class="dashboard-content">
+      
+      <!-- 💬 Tarjeta de bienvenida -->
+      <div class="dashboard-card animate-fade admin-welcome">
+        <h2 class="dashboard-card-title">Bienvenido, Administrador 👋</h2>
+        <p class="dashboard-card-text">
+          Desde este panel puede gestionar productos, controlar el inventario, revisar las ventas y supervisar la operación general del sistema.
+        </p>
+      </div>
+
+      <!-- ⚙️ Acciones rápidas -->
+      <div class="dashboard-card animate-fade admin-actions">
+        <h2 class="dashboard-card-title">Accesos Rápidos ⚙️</h2>
+        <p class="dashboard-card-text">Seleccione una acción para administrar el sistema:</p>
+        <div class="admin-actions-buttons">
+          <a href="../products/product_create.html" class="btn-secondary">Agregar producto</a>
+          <a href="../products/product_delete.html" class="btn-secondary">Eliminar producto</a>
+          <a href="../inventory/inventory_entry.html" class="btn-secondary">Registrar entrada</a>
+          <a href="../inventory/inventory_exit.html" class="btn-secondary">Registrar salida</a>
+          <a href="../sales/sale_detail.html" class="btn-secondary">Ver ventas por ID</a>
+        </div>
+      </div>
+
+      <!-- 📦 Reporte del día -->
+      <div class="dashboard-card animate-fade">
+        <h2 class="dashboard-card-title">Resumen Diario 📅</h2>
+        <ul class="dashboard-summary">
+          <li>🕒 28 ventas completadas hoy</li>
+          <li>📦 45 productos actualizados en inventario</li>
+          <li>👥 3 nuevos usuarios registrados</li>
+          <li>💰 Ingresos: S/ 1,920.00</li>
+        </ul>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- =========================================================
+       ⚙️ PIE DE PÁGINA DEL DASHBOARD ADMINISTRATIVO
+  ========================================================= -->
+  <footer class="dashboard-footer admin-footer">
+    <p>© 2025 Sistema de Registro de Ventas | Panel de Administración</p>
+  </footer>
+</body>
+</html>

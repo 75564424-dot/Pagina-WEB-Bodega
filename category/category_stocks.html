@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión de Stock por Categoría | Panel del Administrador</title>
+
+  <!-- 🔗 Estilos reutilizados -->
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="category.css">
+</head>
+
+<body>
+  <!-- =========================================================
+       🧭 ENCABEZADO DEL ADMINISTRADOR
+  ========================================================= -->
+  <header class="view-header animate-fade">
+    <div class="logo-container">
+      <img src="../assets/images/Bodega.png" alt="Logo Bodega Central" class="view-logo">
+      <h1 class="view-title">Panel del Administrador</h1>
+    </div>
+    <nav class="view-nav">
+      <ul>
+        <li><a href="../users/admin_dashboard.html">Volver al Dashboard</a></li>
+        <li><a href="../products/CRUD.html">Productos</a></li>
+        <li><a href="category_CRUD.html">Categorías</a></li>
+        <li><a href="category_stocks.html" class="active">Stock por Categoría</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- =========================================================
+       📦 SECCIÓN PRINCIPAL: GESTIÓN DE STOCK
+  ========================================================= -->
+  <main class="category-container animate-fade">
+    <!-- 🏷️ Encabezado descriptivo -->
+    <section class="category-header">
+      <h2 class="category-title">📦 Gestión de Stock por Categoría</h2>
+      <p class="category-subtitle">
+        Administra la cantidad de productos disponibles en cada categoría.  
+        Puedes agregar nuevos productos o actualizar el stock de los existentes.
+      </p>
+    </section>
+
+    <!-- =========================================================
+         🧭 GUÍA DE PROCESO SEGÚN EL TIPO DE PRODUCTO
+    ========================================================= -->
+    <section class="category-tips animate-fade">
+      <h3>🧩 Guía de Registro de Productos</h3>
+      <ul>
+        <li>
+          <strong>Si el producto es nuevo:</strong>  
+          <ol>
+            <li>Dirígete a <a href="category_CRUD.html">Categorías</a> y crea una nueva categoría si no existe.</li>
+            <li>Registra la categoría con su nombre, código y descripción.</li>
+            <li>Regresa a esta página e ingresa el producto bajo la nueva categoría.</li>
+          </ol>
+        </li>
+        <li>
+          <strong>Si el producto ya tiene categoría:</strong>  
+          <ol>
+            <li>Selecciona la categoría correspondiente en el formulario.</li>
+            <li>Completa los datos del producto y la cantidad que ingresará al stock.</li>
+            <li>Guarda los cambios y verifica en el historial si el stock se actualizó correctamente.</li>
+          </ol>
+        </li>
+      </ul>
+    </section>
+
+    <!-- =========================================================
+         🧩 FORMULARIO: AGREGAR PRODUCTO AL STOCK (Método POST)
+    ========================================================= -->
+    <section class="category-form-section">
+      <form class="category-form animate-fade" action="#" method="post">
+        <h3>➕ Agregar Producto al Stock</h3>
+
+        <div class="form-group">
+          <label for="product-name">Nombre del Producto:</label>
+          <input type="text" id="product-name" placeholder="Ej. Gaseosa Coca-Cola 500ml">
+        </div>
+
+        <div class="form-group">
+          <label for="product-category">Categoría:</label>
+          <select id="product-category">
+            <option value="" disabled selected>Seleccione una categoría existente</option>
+            <option value="bebidas">Bebidas</option>
+            <option value="abarrotes">Abarrotes</option>
+            <option value="limpieza">Limpieza</option>
+          </select>
+          <p class="form-hint">⚠️ Si el producto pertenece a una categoría nueva, primero regístrela desde <a href="category_CRUD.html">Categorías</a>.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="product-stock">Cantidad a agregar:</label>
+          <input type="number" id="product-stock" min="1" placeholder="Ej. 50">
+          <p class="form-hint">⚠️ Primero verifique cuantos productos estan en reserva o se registraron en la entrada, no se pueden colocar mas productos de los que existen realmente</p>
+        </div>
+
+        <div class="form-group">
+          <label for="product-code">Código del Producto:</label>
+          <input type="text" id="product-code" placeholder="Ej. PROD-001">
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Agregar al Stock</button>
+          <button type="reset" class="btn-secondary">Limpiar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- =========================================================
+         📜 TABLA DE HISTORIAL DE STOCKS
+    ========================================================= -->
+    <section class="category-history animate-fade">
+      <h3>📋 Historial de Ingresos de Stock</h3>
+      <table class="category-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Producto</th>
+            <th>Categoría</th>
+            <th>Cantidad Agregada</th>
+            <th>Fecha</th>
+            <th>Responsable</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#001</td>
+            <td>Gaseosa Coca-Cola 500ml</td>
+            <td>Bebidas</td>
+            <td>60</td>
+            <td>08/10/2025</td>
+            <td>Admin01</td>
+          </tr>
+          <tr>
+            <td>#002</td>
+            <td>Detergente Ariel 1L</td>
+            <td>Limpieza</td>
+            <td>40</td>
+            <td>09/10/2025</td>
+            <td>Admin02</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

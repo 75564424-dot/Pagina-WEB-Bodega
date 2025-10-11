@@ -1,0 +1,506 @@
+/* =========================================================
+   📁 ARCHIVO: users.css
+   💡 Propósito: Contener los estilos específicos del módulo "users"
+                 (login, registro, paneles de usuario).
+   ========================================================= */
+
+/* 🖼️ Fondo visual exclusivo para la pantalla de login de usuario */
+.user-login-body {
+  background: linear-gradient(120deg, #f0932b, #eb4d4b);
+}
+
+/* 🧱 Contenedor que centra el contenido del formulario */
+.user-login-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  margin: auto;
+}
+
+/* 💳 Tarjeta principal con efecto translúcido */
+.user-login-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  text-align: center;
+}
+
+/* 🏷️ Encabezado y texto descriptivo del login */
+.user-login-title {
+  font-size: 2em;
+  color: #2f3640;
+  margin-bottom: 10px;
+}
+
+.user-login-subtitle {
+  color: #718093;
+  margin-bottom: 20px;
+}
+
+/* 🧾 Estructura del formulario de inicio de sesión */
+.user-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* 🏷️ Etiquetas de campos */
+.user-login-form label {
+  text-align: left;
+  color: #2f3640;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+
+/* 🔢 Campos de entrada (input text, email, password) */
+.user-login-form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #dcdde1;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* ✨ Efecto de enfoque sobre inputs */
+.user-login-form input:focus {
+  border-color: #0097e6;
+}
+
+/* 🔗 Texto informativo y enlace de registro */
+.user-login-register-text {
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #2f3640;
+}
+
+/* 🔗 Enlace hacia la página de registro */
+.user-login-link-register {
+  color: #e84118;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* 🪄 Efecto hover para enlace de registro */
+.user-login-link-register:hover {
+  text-decoration: underline;
+  color: #c23616;
+}
+
+/* =========================================================
+   🔐 SECCIÓN: Estilos del login administrativo
+   💡 Propósito: Dar un tono más formal y jerárquico al acceso de administradores.
+   ========================================================= */
+
+/* 🖼️ Fondo sobrio para login de administrador */
+.admin-login-body {
+  background: linear-gradient(135deg, #273c75, #192a56);
+}
+
+/* 🧱 Contenedor principal del login administrativo */
+.admin-login-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+  margin: auto;
+}
+
+/* 💼 Tarjeta del formulario administrativo */
+.admin-login-card {
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+  padding: 35px;
+  text-align: center;
+  border-top: 4px solid #273c75;
+}
+
+/* 🏷️ Encabezado y texto institucional */
+.admin-login-title {
+  font-size: 2em;
+  color: #192a56;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.admin-login-subtitle {
+  color: #718093;
+  font-size: 0.95em;
+  margin-bottom: 25px;
+}
+
+/* 🧾 Formulario administrativo */
+.admin-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* 🏷️ Etiquetas de campos administrativos */
+.admin-login-form label {
+  text-align: left;
+  color: #2f3640;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+
+/* 🔢 Campos de entrada administrativos */
+.admin-login-form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #dcdde1;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* ✨ Efecto visual al enfocar un input */
+.admin-login-form input:focus {
+  border-color: #273c75;
+}
+
+/* ⚠️ Mensaje de advertencia institucional */
+.admin-login-warning {
+  margin-top: 15px;
+  font-size: 0.85em;
+  color: #c23616;
+  font-weight: 500;
+}
+
+/* =========================================================
+   👤 SECCIÓN: Estilos del registro de usuario
+   💡 Propósito: Estilos visuales y estructurales para la vista de registro.
+   ========================================================= */
+
+/* 🌈 Fondo visual del registro */
+.user-register-body {
+  background: linear-gradient(135deg, #22a6b3, #7ed6df);
+}
+
+/* 🧱 Contenedor principal del registro */
+.user-register-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+  margin: auto;
+}
+
+/* 💳 Tarjeta del formulario de registro */
+.user-register-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  padding: 35px;
+  text-align: center;
+}
+
+/* 🏷️ Encabezados del formulario */
+.user-register-title {
+  font-size: 2em;
+  color: #2f3640;
+  margin-bottom: 10px;
+}
+
+.user-register-subtitle {
+  color: #718093;
+  margin-bottom: 20px;
+}
+
+/* 🧾 Estructura del formulario de registro */
+.user-register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* 🏷️ Etiquetas de los campos */
+.user-register-form label {
+  text-align: left;
+  color: #2f3640;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+
+/* 🔢 Campos de entrada (text, email, password) */
+.user-register-form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #dcdde1;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* ✨ Efecto visual al enfocar un input */
+.user-register-form input:focus {
+  border-color: #22a6b3;
+}
+
+/* 🔗 Texto informativo y enlace hacia login */
+.user-register-login-text {
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #2f3640;
+}
+
+/* 🔗 Enlace hacia el login */
+.user-register-link-login {
+  color: #0097e6;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* 🪄 Efecto hover para el enlace de login */
+.user-register-link-login:hover {
+  text-decoration: underline;
+  color: #273c75;
+}
+
+/* =========================================================
+   🧭 SECCIÓN: Estilos generales para dashboards
+   💡 Propósito: Base visual reutilizable para admin y usuario
+   ========================================================= */
+
+/* 🌍 Fondo y tipografía */
+.dashboard-body {
+  background-color: #f5f6fa;
+  font-family: 'Poppins', sans-serif;
+  color: #2f3640;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* 🧭 Encabezado superior */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #273c75;
+  color: #fff;
+  padding: 15px 40px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-title {
+  padding: 1em;
+  font-size: 1.6em;
+  font-weight: 600;
+}
+
+.dashboard-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.dashboard-menu-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.dashboard-menu-link:hover {
+  color: #00a8ff;
+}
+
+.dashboard-menu-link.logout {
+  color: #ff6b6b;
+}
+
+/* =========================================================
+   🧱 ESTRUCTURA PRINCIPAL DEL DASHBOARD
+   ========================================================= */
+.dashboard-layout {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 25px;
+}
+
+/* 👤 Panel lateral del perfil */
+.dashboard-sidebar {
+  flex: 1 1 250px;
+  max-width: 280px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile-name {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #273c75;
+}
+
+.profile-email {
+  font-size: 0.9em;
+  color: #718093;
+  margin-bottom: 15px;
+}
+
+.profile-actions {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-link {
+  display: block;
+  margin: 8px 0;
+  color: #00a8ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.profile-link:hover {
+  color: #0097e6;
+}
+
+/* =========================================================
+   🧩 CONTENIDO PRINCIPAL DEL PANEL
+   ========================================================= */
+.dashboard-content {
+  flex: 3 1 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* 💳 Tarjetas de información */
+.dashboard-card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* 🧮 Tarjetas de estadísticas */
+.dashboard-stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.dashboard-stat-card {
+  flex: 1 1 150px;
+  padding: 20px;
+  border-radius: 14px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stat-purchases { background-color: #e4205b; }
+.stat-pending { background-color: #fbc531; }
+.stat-delivered { background-color: #44bd32; }
+
+.stat-title {
+  font-size: 1em;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+/* 🛍️ Lista de productos recomendados */
+.recommended-products {
+  margin: 10px 0 15px;
+  padding-left: 20px;
+}
+
+.recommended-products li {
+  font-size: 0.95em;
+  color: #353b48;
+  margin-bottom: 6px;
+}
+
+/* ⚙️ Pie del panel */
+.dashboard-footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #dcdde1;
+  font-size: 0.9em;
+  color: #2f3640;
+  margin-top: auto;
+}
+
+/* =========================================================
+   👨‍💼 SECCIÓN: Ajustes visuales para el dashboard del administrador
+   ========================================================= */
+
+/* Encabezado más formal y sobrio */
+.admin-header {
+  background-color: #192a56;
+}
+
+.admin-sidebar {
+  background-color: #f0f3f5;
+}
+
+.admin-footer {
+  background-color: #c8d6e5;
+}
+
+/* Tarjetas de estadísticas con tonos sobrios */
+.stat-sales { background-color: #273c75; }
+.stat-products { background-color: #40739e; }
+.stat-inventory { background-color: #718093; }
+.stat-users { background-color: #44bd32; }
+
+/* Tarjeta de bienvenida diferenciada */
+.admin-welcome {
+  border-left: 6px solid #273c75;
+}
+
+/* Botones secundarios (acciones rápidas) */
+.btn-secondary {
+  background-color: #40739e;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+.btn-secondary:hover {
+  background-color: #0097e6;
+}
+
+/* Contenedor de botones de acción rápida */
+.admin-actions-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Lista del resumen diario */
+.dashboard-summary {
+  margin: 10px 0;
+  padding-left: 25px;
+  color: #353b48;
+}
+.dashboard-summary li {
+  margin-bottom: 6px;
+}

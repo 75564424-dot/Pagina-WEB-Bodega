@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión de Categorías | Panel del Administrador</title>
+
+  <!-- 🔗 Estilos globales y específicos -->
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="category.css">
+</head>
+
+<body>
+  <!-- =========================================================
+       🧭 ENCABEZADO DEL ADMINISTRADOR
+  ========================================================= -->
+  <header class="view-header animate-fade">
+    <div class="logo-container">
+      <img src="../assets/images/Bodega.png" alt="Logo Bodega Central" class="view-logo">
+      <h1 class="view-title">Panel del Administrador</h1>
+    </div>
+    <nav class="view-nav">
+      <ul>
+        <li><a href="../users/admin_dashboard.html">Volver al Dashboard</a></li>
+        <li><a href="category_create.html" class="active">Categorías</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- =========================================================
+       🗂️ SECCIÓN PRINCIPAL: GESTIÓN DE CATEGORÍAS
+  ========================================================= -->
+  <main class="category-container animate-fade">
+    <!-- 🏷️ Encabezado descriptivo -->
+    <section class="category-header">
+      <h2 class="category-title">🗂️ Gestión de Categorías</h2>
+      <p class="category-subtitle">
+        Administra, actualiza y elimina las categorías que agrupan tus productos.  
+        Mantén tu inventario bien estructurado y optimiza la organización de artículos.
+      </p>
+    </section>
+
+    <!-- 💡 Consejos informativos -->
+    <aside class="category-tips animate-fade">
+      <h3>💡 Consejos Rápidos</h3>
+      <ul>
+        <li>Usa nombres simples y descriptivos para cada categoría.</li>
+        <li>Evita duplicar nombres o códigos ya existentes.</li>
+        <li>Una buena descripción facilita el registro de productos.</li>
+        <li>Actualiza o elimina categorías obsoletas para mantener el orden.</li>
+      </ul>
+    </aside>
+
+    <!-- =========================================================
+         📋 FORMULARIO: CREAR NUEVA CATEGORÍA (Método POST)
+    ========================================================= -->
+    <section class="category-form-section">
+      <form class="category-form animate-fade" action="#" method="post">
+        <h3>➕ Registrar Nueva Categoría</h3>
+
+        <div class="form-group">
+          <label for="category-name">Nombre de la Categoría:</label>
+          <input type="text" id="category-name" placeholder="Ej. Abarrotes, Bebidas, Limpieza...">
+        </div>
+
+        <div class="form-group">
+          <label for="category-code">Código de Categoría:</label>
+          <input type="text" id="category-code" placeholder="Ej. CAT-001">
+        </div>
+
+        <div class="form-group">
+          <label for="category-desc">Descripción:</label>
+          <textarea id="category-desc" rows="3" placeholder="Describe brevemente qué productos agrupa esta categoría."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Guardar Categoría</button>
+          <button type="reset" class="btn-secondary">Limpiar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- =========================================================
+         🧩 FORMULARIO: ACTUALIZAR CATEGORÍA (Método PUT)
+    ========================================================= -->
+    <section class="category-form-section">
+      <form class="category-form animate-fade" action="#" method="put">
+        <h3>✏️ Actualizar Categoría Existente</h3>
+
+        <div class="form-group">
+          <label for="update-id">ID o Código de Categoría:</label>
+          <input type="text" id="update-id" placeholder="Ej. CAT-001">
+        </div>
+
+        <div class="form-group">
+          <label for="update-name">Nuevo Nombre (opcional):</label>
+          <input type="text" id="update-name" placeholder="Ej. Bebidas Refrescantes">
+        </div>
+
+        <div class="form-group">
+          <label for="update-desc">Nueva Descripción (opcional):</label>
+          <textarea id="update-desc" rows="3" placeholder="Describe los cambios o mejoras de esta categoría."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Actualizar</button>
+          <button type="reset" class="btn-secondary">Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- =========================================================
+         🗑️ FORMULARIO: ELIMINAR CATEGORÍA (Método DELETE)
+    ========================================================= -->
+    <section class="category-form-section">
+      <form class="category-form animate-fade" action="#" method="delete">
+        <h3>🗑️ Eliminar Categoría</h3>
+
+        <div class="form-group">
+          <label for="delete-id">ID o Código de Categoría:</label>
+          <input type="text" id="delete-id" placeholder="Ej. CAT-003">
+        </div>
+
+        <p class="warning-text">
+          ⚠️ <strong>Advertencia:</strong> esta acción es permanente.  
+          Asegúrate de que la categoría no tenga productos asociados antes de eliminarla.
+        </p>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Eliminar</button>
+          <button type="reset" class="btn-secondary">Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- =========================================================
+         📜 HISTORIAL DE CATEGORÍAS REGISTRADAS
+    ========================================================= -->
+    <section class="category-history animate-fade">
+      <h3>📑 Categorías Registradas</h3>
+      <table class="category-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Código</th>
+            <th>Descripción</th>
+            <th>Fecha de Creación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#001</td>
+            <td>Bebidas</td>
+            <td>CAT-001</td>
+            <td>Incluye gaseosas, jugos, y agua embotellada.</td>
+            <td>08/10/2025</td>
+          </tr>
+          <tr>
+            <td>#002</td>
+            <td>Limpieza</td>
+            <td>CAT-002</td>
+            <td>Detergentes, lejías y productos de aseo.</td>
+            <td>09/10/2025</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

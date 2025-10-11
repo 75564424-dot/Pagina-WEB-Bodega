@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceso Administrativo - Sistema de Ventas</title>
+
+  <!-- 🔗 Estilos generales y específicos -->
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="users.css">
+</head>
+<body class="admin-login-body">
+  <!-- 🧱 Contenedor principal del área de login del administrador -->
+  <div class="admin-login-container">
+    <!-- 💼 Tarjeta del formulario con diseño formal -->
+    <div class="admin-login-card animate-fade">
+      <h1 class="admin-login-title">Panel Administrativo</h1>
+      <p class="admin-login-subtitle">
+        Acceso exclusivo para personal autorizado del sistema
+      </p>
+
+      <!-- 📝 Formulario de autenticación administrativa -->
+      <form class="admin-login-form" action="../users/admin_dashboard.html" method="post">
+        <!-- 📧 Campo de usuario o correo -->
+        <label for="admin-login-email">Correo institucional</label>
+        <input type="email" id="admin-login-email" name="email" placeholder="admin@bodega.com" required>
+
+        <!-- 🔒 Campo de contraseña -->
+        <label for="admin-login-password">Contraseña</label>
+        <input type="password" id="admin-login-password" name="password" placeholder="********" required>
+
+        <!-- 🚪 Botón para ingresar al panel -->
+        <button type="submit" class="btn-primary">Acceder al Panel</button>
+
+        <!-- 🔐 Mensaje institucional adicional -->
+        <p class="admin-login-warning">
+          ⚠️ El acceso no autorizado será registrado en el sistema.
+        </p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

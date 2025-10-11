@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorar Productos | Bodega Virtual</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="inventory.css">
+</head>
+<body>
+  <!-- 🧭 CABECERA GENERAL -->
+  <header class="view-header">
+    <div class="logo-container">
+      <img src="../assets/images/Bodega.png" alt="Logo" class="view-logo">
+      <h1 class="view-title">Bodega Virtual</h1>
+    </div>
+    <nav class="view-nav">
+      <ul>
+        <li><a href="../products/product_create.html">Volver a editar (ocultar, esto es para el admin)</a></li>
+        <li><a href="../views/index.html">Inicio</a></li>
+        <li><a href="inventory.html" class="active">Productos</a></li>
+        <li><a href="../views/adds.html">Publicidad</a></li>
+        <li><a href="../sales/cart.html" class="btn-primary" style="padding:8px 14px;">🛒 Ver Carrito</a></li>
+        <li><a href="../sales/sales.html" class="btn-primary" style="padding:8px 14px;">📈 Historial de compras</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 🛍️ CONTENEDOR PRINCIPAL -->
+  <main class="inventory-container animate-fade">
+    <!-- 🧾 INTRODUCCIÓN -->
+    <section class="inventory-intro">
+      <h2>Encuentra lo que necesitas</h2>
+      <p>Explora nuestro catálogo de productos por categoría o usa el buscador para localizar rápidamente lo que deseas.  
+      ¡Agrega tus productos favoritos al carrito y continúa explorando!</p>
+    </section>
+
+    <!-- 🔍 BUSCADOR -->
+    <section class="search-section">
+      <form class="search-form" action="#" method="get">
+        <input type="text" name="buscar" placeholder="Buscar producto por nombre...">
+        <button type="submit" class="btn-primary">Buscar</button>
+      </form>
+    </section>
+
+    <!-- 🧩 CATEGORÍAS -->
+    <aside class="category-filter">
+      <h3>Categorías</h3>
+      <ul>
+        <li><a href="#" class="active">Todos</a></li>
+        <li><a href="#">Bebidas</a></li>
+        <li><a href="#">Snacks</a></li>
+        <li><a href="#">Abarrotes</a></li>
+        <li><a href="#">Limpieza</a></li>
+      </ul>
+    </aside>
+
+    <!-- 🛒 LISTADO DE PRODUCTOS -->
+    <section class="products-grid">
+      <!-- 🥤 BEBIDAS -->
+      <article class="product-card animate-fade">
+        <img src="../assets/images/bebida.Coca.Cola.png" alt="Coca Cola" class="product-img">
+        <h4>Coca Cola 500ml</h4>
+        <p class="category">Bebidas</p>
+        <p class="price">S/ 3.50</p>
+        <button class="btn-primary">Agregar al carrito</button>
+      </article>
+
+      <article class="product-card animate-fade">
+        <img src="../assets/images/bebida.Inca.Kola.png" alt="Inca Kola" class="product-img">
+        <h4>Inca Kola 500ml</h4>
+        <p class="category">Bebidas</p>
+        <p class="price">S/ 3.50</p>
+        <button class="btn-primary">Agregar al carrito</button>
+      </article>
+
+      <article class="product-card animate-fade">
+        <img src="../assets/images/bebida.agua.mineral.Cielo.png" alt="Agua Cielo" class="product-img">
+        <h4>Agua Mineral Cielo 625ml</h4>
+        <p class="category">Bebidas</p>
+        <p class="price">S/ 1.80</p>
+        <button class="btn-primary">Agregar al carrito</button>
+      </article>
+
+      <article class="product-card animate-fade">
+        <img src="../assets/images/bebida.San.Luis.png" alt="Agua San Luis" class="product-img">
+        <h4>Agua San Luis 500ml</h4>
+        <p class="category">Bebidas</p>
+        <p class="price">S/ 1.60</p>
+        <button class="btn-primary">Agregar al carrito</button>
+      </article>
+
+      <article class="product-card animate-fade">
+        <img src="../assets/images/bebida.jugo.Gloria.Durazno.png" alt="Jugo Gloria Durazno" class="product-img">
+        <h4>Jugo Gloria Durazno 200ml</h4>
+        <p class="category">Bebidas</p>
+        <p class="price">S/ 2.50</p>
+        <button class="btn-primary">Agregar al carrito</button>
+      </article>
+
+      <!-- 🍪 SNACKS -->
+      <article class="product-card animate-fade">
+        <img src="../assets/images/snack.galletas.Oreo.png" alt="Galletas Oreo" class="product-img">
+        <h4>Galletas Oreo</h4>
+        <p class="category">Snacks</p>
+        <p class="price">S/ 2.80</p>
+        <button class="btn-primary">Agregar al carrito</button>
+      </article>
+
+      <article class="product-card animate-fade">
+        <img src="../assets/images/snack.papas.Lays.png" alt="Papas Lays" class="product-img">
+        <h4>Papas Lays Clásicas</h4>
+        <p class="category">Snacks</p>
+        <p class="price">S/ 3.00</p>
+        <button class="btn-primary">Agregar al carrito</button>
+      </article>
+
+      <article class="product-card animate-fade">
+        <img src="../assets/images/snack.Snickers.png" alt="Snickers" class="product-img">
+        <h4>Barra Snickers</h4>
+        <p class="category">Snacks</p>
+        <p class="price">S/ 2.50</p>
+        <button class="btn-primary">Agregar al carrito</button>
+      </article>
+
+      <article class="product-card animate-fade">
+        <img src="../assets/images/snack.chetos.png" alt="Cheetos" class="product-img">
+        <h4>Cheetos Queso 40g</h4>
+        <p class="category">Snacks</p>
+        <p class="price">S/ 2.20</p>
+        <button class="btn-primary">Agregar al carrito</button>
+      </article>
+
+      <article class="product-card animate-fade">
+        <img src="../assets/images/snack.galletas.Saltin.Noel.png" alt="Galletas Saltin Noel" class="product-img">
+        <h4>Galletas Saltin Noel</h4>
+        <p class="category">Snacks</p>
+        <p class="price">S/ 1.80</p>
+        <button class="btn-primary">Agregar al carrito</button>
+      </article>
+
+      <!-- 🌾 ABARROTES -->
+      <article class="product-card animate-fade">
+        <img src="../assets/images/abarrotes.arroz.Costeño.png" alt="Arroz Costeño" class="product-img">
+        <h4>Arroz Costeño 1kg</h4>
+        <p class="category">Abarrotes</p>
+        <p class="price">S/ 4.20</p>
+        <button class="btn-primary">Agregar al carrito</button>
+      </article>
+
+      <article class="product-card animate-fade">
+        <img src="../assets/images/abarrotes.azucar.Rubia.png" alt="Azúcar Rubia" class="product-img">
+        <h4>Azúcar Rubia 1kg</h4>
+        <p class="category">Abarrotes</p>
+        <p class="price">S/ 3.50</p>
+        <button class="btn-primary">Agregar al carrito</button>
+      </article>
+
+      <article class="product-card animate-fade">
+        <img src="../assets/images/abarrotes.aceite.Primor.png" alt="Aceite Primor" class="product-img">
+        <h4>Aceite Primor 1L</h4>
+        <p class="category">Abarrotes</p>
+        <p class="price">S/ 9.50</p>
+        <button class="btn-primary">Agregar al carrito</button>
+      </article>
+
+      <!-- 🧼 LIMPIEZA -->
+      <article class="product-card animate-fade">
+        <img src="../assets/images/articulo.limpieza.detergente.Ariel.png" alt="Detergente Ariel" class="product-img">
+        <h4>Detergente Ariel 800g</h4>
+        <p class="category">Limpieza</p>
+        <p class="price">S/ 7.90</p>
+        <button class="btn-primary">Agregar al carrito</button>
+      </article>
+
+      <article class="product-card animate-fade">
+        <img src="../assets/images/articulo.limpieza.esponja.Cocina.png" alt="Esponja Cocina" class="product-img">
+        <h4>Esponja de Cocina</h4>
+        <p class="category">Limpieza</p>
+        <p class="price">S/ 1.20</p>
+        <button class="btn-primary">Agregar al carrito</button>
+      </article>
+
+      <article class="product-card animate-fade">
+        <img src="../assets/images/articulo.limpieza.lava.vajillas.Sapolio.png" alt="Lava Vajillas Sapolio" class="product-img">
+        <h4>Lava Vajillas Sapolio 500ml</h4>
+        <p class="category">Limpieza</p>
+        <p class="price">S/ 5.00</p>
+        <button class="btn-primary">Agregar al carrito</button>
+      </article>
+
+      <article class="product-card animate-fade">
+        <img src="../assets/images/articulo.limpieza.lejia.Clorox.png" alt="Lejía Clorox" class="product-img">
+        <h4>Lejía Clorox 1L</h4>
+        <p class="category">Limpieza</p>
+        <p class="price">S/ 4.80</p>
+        <button class="btn-primary">Agregar al carrito</button>
+      </article>
+
+      <article class="product-card animate-fade">
+        <img src="../assets/images/articulo.limpieza.suavizante.Ensueño.png" alt="Suavizante Ensueño" class="product-img">
+        <h4>Suavizante Ensueño 900ml</h4>
+        <p class="category">Limpieza</p>
+        <p class="price">S/ 8.20</p>
+        <button class="btn-primary">Agregar al carrito</button>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

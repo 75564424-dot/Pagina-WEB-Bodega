@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Usuario - Sistema de Ventas</title>
+
+  <!-- 🔗 Estilos globales y específicos del módulo de usuarios -->
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="users.css">
+</head>
+<body class="user-register-body">
+  <!-- 🧱 Contenedor principal del área de registro -->
+  <div class="user-register-container">
+    <!-- 💳 Tarjeta visual del formulario con animación de entrada -->
+    <div class="user-register-card animate-fade">
+      <h1 class="user-register-title">Crear cuenta</h1>
+      <p class="user-register-subtitle">Regístrate para comenzar tus compras</p>
+
+      <!-- 📝 Formulario principal de registro -->
+      <form class="user-register-form" action="../users/user_dashboard.html" method="post">
+        <!-- 🧍 Nombre completo -->
+        <label for="user-register-name">Nombre completo</label>
+        <input type="text" id="user-register-name" name="fullname" placeholder="Ejemplo: Juan Pérez" required>
+
+        <!-- 📧 Correo electrónico -->
+        <label for="user-register-email">Correo electrónico</label>
+        <input type="email" id="user-register-email" name="email" placeholder="usuario@correo.com" required>
+
+        <!-- 🔒 Contraseña -->
+        <label for="user-register-password">Contraseña</label>
+        <input type="password" id="user-register-password" name="password" placeholder="********" required>
+
+        <!-- 🔒 Confirmar contraseña -->
+        <label for="user-register-confirm">Confirmar contraseña</label>
+        <input type="password" id="user-register-confirm" name="confirm_password" placeholder="********" required>
+
+        <!-- 🚪 Botón de acción para registrar -->
+        <button type="submit" class="btn-primary">Registrarme</button>
+
+        <!-- 🔗 Enlace alternativo hacia login -->
+        <p class="user-register-login-text">
+          ¿Ya tienes una cuenta?
+          <a href="login_user.html" class="user-register-link-login">Inicia sesión aquí</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

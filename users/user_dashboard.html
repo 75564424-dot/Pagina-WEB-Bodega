@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel del Usuario - Sistema de Ventas</title>
+
+  <!-- 🔗 Estilos generales y específicos -->
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="users.css">
+</head>
+
+<body class="dashboard-body">
+  <!-- =========================================================
+       🧭 ENCABEZADO PRINCIPAL DEL PANEL DE USUARIO
+       Muestra el título del panel y la navegación superior.
+  ========================================================= -->
+  <header class="dashboard-header">
+    <h1 class="dashboard-title">Panel del Usuario</h1>
+    <nav class="dashboard-nav">
+      <ul class="dashboard-menu">
+        <li><a href="../views/index.html" class="dashboard-menu-link">Inicio</a></li>
+        <li><a href="../sales/sales.html" class="dashboard-menu-link">Mis compras</a></li>
+        <li><a href="login_user.html" class="dashboard-menu-link logout">Cerrar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- =========================================================
+       🧱 CONTENIDO PRINCIPAL DEL PANEL DE USUARIO
+       Contiene un perfil lateral y tarjetas informativas.
+  ========================================================= -->
+  <main class="dashboard-layout">
+    
+    <!-- 👤 Panel lateral de perfil -->
+    <aside class="dashboard-sidebar animate-fade">
+      <img src="../assets/images/Bodega.png" alt="Foto de usuario" class="profile-avatar">
+      <h2 class="profile-name">Juan Pérez</h2>
+      <p class="profile-email">juan.perez@example.com</p>
+
+      <ul class="profile-actions">
+        <li><a href="#" class="profile-link">Editar perfil</a></li>
+        <li><a href="#" class="profile-link">Cambiar contraseña</a></li>
+      </ul>
+    </aside>
+
+    <!-- 🧩 Contenido dinámico principal -->
+    <section class="dashboard-content">
+      
+      <!-- 💬 Tarjeta de bienvenida -->
+      <div class="dashboard-card animate-fade">
+        <h2 class="dashboard-card-title">¡Bienvenido de nuevo, Juan! 👋</h2>
+        <p class="dashboard-card-text">
+          Nos alegra verte nuevamente. Desde aquí puedes consultar tu historial de compras, revisar ofertas y actualizar tu información.
+        </p>
+      </div>
+
+      <!-- 📊 Tarjetas de resumen de actividad -->
+      <div class="dashboard-stats">
+        <div class="dashboard-stat-card stat-purchases animate-fade">
+          <h3 class="stat-title">Compras Totales</h3>
+          <p class="stat-value">23</p>
+        </div>
+        <div class="dashboard-stat-card stat-pending animate-fade">
+          <h3 class="stat-title">Pendientes</h3>
+          <p class="stat-value">4</p>
+        </div>
+        <div class="dashboard-stat-card stat-delivered animate-fade">
+          <h3 class="stat-title">Entregadas</h3>
+          <p class="stat-value">19</p>
+        </div>
+      </div>
+
+      <!-- 🛍️ Tarjeta de productos recomendados -->
+      <div class="dashboard-card animate-fade">
+        <h2 class="dashboard-card-title">Recomendaciones para ti 🛒</h2>
+        <p class="dashboard-card-text">Basado en tus compras recientes, te podrían interesar:</p>
+        <ul class="recommended-products">
+          <li>✨ Arroz Costeño 5kg</li>
+          <li>🧴 Detergente Ariel 1L</li>
+          <li>🥤 Inca Kola 1.5L</li>
+        </ul>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- =========================================================
+       ⚙️ PIE DE PÁGINA DEL DASHBOARD
+       Información institucional o derechos.
+  ========================================================= -->
+  <footer class="dashboard-footer">
+    <p>© 2025 Sistema de Registro de Ventas | Usuario</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión - Cliente</title>
+
+  <!-- 🔗 Estilos globales y específicos del módulo de usuarios -->
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="users.css">
+</head>
+<body class="user-login-body">
+  <!-- 🧱 Contenedor general del área de login de usuario -->
+  <div class="user-login-container">
+    <!-- 💳 Tarjeta visual del formulario con animación de entrada -->
+    <div class="user-login-card animate-fade">
+      <h1 class="user-login-title">Bienvenido</h1>
+      <p class="user-login-subtitle">Accede a tu cuenta para continuar</p>
+
+      <!-- 📝 Formulario principal de inicio de sesión -->
+      <form class="user-login-form" action="../users/user_dashboard.html" method="post">
+        <!-- 📧 Campo de correo electrónico -->
+        <label for="user-login-email">Correo electrónico</label>
+        <input type="text" id="user-login-email" name="email" placeholder="usuario@correo.com" required>
+
+        <!-- 🔒 Campo de contraseña -->
+        <label for="user-login-password">Contraseña</label>
+        <input type="password" id="user-login-password" name="password" placeholder="********" required>
+
+        <!-- 🚪 Botón de acción para enviar datos -->
+        <button type="submit" class="btn-primary">Iniciar sesión</button>
+
+        <!-- 🔗 Enlace alternativo hacia el registro -->
+        <p class="user-login-register-text">
+          ¿No tienes una cuenta?
+          <a href="register.html" class="user-login-link-register">Regístrate aquí</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

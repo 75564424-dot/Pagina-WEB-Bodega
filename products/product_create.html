@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar Nuevo Producto | Panel Administrativo</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="product_CRUD.css">
+</head>
+<body>
+  <!-- 🔷 CABECERA GENERAL -->
+  <header class="view-header">
+    <div class="logo-container">
+      <img src="../assets/images/Bodega.png" alt="Logo" class="view-logo">
+      <h1 class="view-title">Panel del Administrador</h1>
+    </div>
+    <nav class="view-nav">
+      <ul>
+        <li><a href="CRUD.html" class="active">Productos</a></li>
+        <li><a href="../inventory/inventory.html">Inventario</a></li>
+        <li><a href="../category/category_CRUD.html">Categorías</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 🧭 CONTENEDOR PRINCIPAL -->
+  <main class="admin-layout animate-fade">
+    <!-- 🔹 PANEL LATERAL CON INFO -->
+    <aside class="filter-panel">
+      <h2>Guía de Registro</h2>
+      <p>Antes de registrar un nuevo producto, asegúrate de que:</p>
+      <ul style="margin-top: 10px; margin-left: 20px;">
+        <li>La <strong>categoría</strong> ya esté registrada.</li>
+        <li>Conozcas el <strong>stock inicial</strong> que tendrá el producto.</li>
+      </ul>
+      <div class="info-box">
+        <p>Si la categoría no existe aún, primero regístrala desde el módulo de  
+        <strong><a href="../category/category_create.html" style="color:#0097e6;">Categorías</a></strong>.</p>
+      </div>
+
+      <!-- 🔙 BOTÓN DE VOLVER -->
+      <a href="CRUD.html" class="btn-return">← Volver al menú</a>
+    </aside>
+
+    <!-- 🧾 CONTENIDO PRINCIPAL -->
+    <section class="content-panel">
+      <div class="content-header">
+        <h2>Registrar Nuevo Producto</h2>
+        <p>Completa la información del nuevo producto y valida los datos antes de guardar.</p>
+      </div>
+
+      <!-- 📋 FORMULARIO DE CREACIÓN -->
+      <form class="reusable-form animate-fade" action="#" method="post">
+        <label for="nombre">Nombre del producto</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ejemplo: Gaseosa 500ml" required>
+
+        <label for="categoria">Categoría</label>
+        <select id="categoria" name="categoria" required>
+          <option value="">Seleccione una categoría</option>
+          <option value="bebidas">Bebidas</option>
+          <option value="snacks">Snacks</option>
+          <option value="limpieza">Limpieza</option>
+        </select>
+
+        <label for="precio">Precio (S/)</label>
+        <input type="number" id="precio" name="precio" placeholder="Ejemplo: 2.50" step="0.01" required>
+
+        <label for="descripcion">Descripción (opcional)</label>
+        <textarea id="descripcion" name="descripcion" rows="3" placeholder="Detalles breves del producto..."></textarea>
+
+        <button type="submit" class="btn-primary">Registrar Producto</button>
+      </form>
+
+      <!-- 💬 MENSAJE EXPLICATIVO -->
+      <div class="info-box">
+        <p>ℹ️ Si olvidaste registrar la categoría o el producto no aparece en el listado,  
+        revisa primero los pasos previos en los módulos de  
+        <strong><a href="../category/category_CRUD.html" style="color:#0097e6;">Categorías</a></strong> o  
+        <strong><a href="../category/category_stocks.html" style="color:#0097e6;">Stock de Categorías</a></strong>.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

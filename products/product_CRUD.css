@@ -1,0 +1,135 @@
+/* =========================================================
+   📁 ARCHIVO: product_CRUD.css
+   💡 Propósito: Estilos reutilizables para productos e inventario.
+   ========================================================= */
+
+/* 📦 Estructura principal de dos columnas (filtros + contenido) */
+.admin-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+  width: 90%;
+  margin-top: 100px;
+  margin-bottom: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* 🎚️ Panel lateral de filtros */
+.filter-panel {
+  background: #f5f6fa;
+  padding: 25px;
+  border-right: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.filter-panel h2 {
+  font-size: 1.3rem;
+  color: #192a56;
+  margin-bottom: 15px;
+}
+
+.filter-form label {
+  font-weight: 600;
+  display: block;
+  margin-top: 15px;
+  color: #2f3640;
+}
+
+.filter-form select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #dcdde1;
+  margin-top: 5px;
+  font-size: 0.95rem;
+}
+
+/* 📋 Contenido principal */
+.content-panel {
+  padding: 25px;
+}
+
+.content-header h2 {
+  font-size: 1.4rem;
+  color: #192a56;
+}
+
+.content-header p {
+  color: #718093;
+  margin-bottom: 20px;
+}
+
+/* 📊 Tabla de datos general (reutilizable) */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.data-table th, .data-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #dcdde1;
+  text-align: left;
+}
+
+.data-table th {
+  background: #f1f2f6;
+  color: #2f3640;
+  font-weight: 600;
+}
+
+.data-table tbody tr:hover {
+  background: rgba(0, 168, 255, 0.08);
+}
+
+.status.available {
+  background-color: #4cd137;
+  color: #fff;
+}
+
+.status.out {
+  background-color: #e84118;
+  color: #fff;
+}
+
+/* 🔘 Botones secundarios y pequeños */
+.btn-secondary {
+  background-color: #718093;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #9097a0;
+  transform: scale(1.05);
+}
+
+.btn-sm {
+  font-size: 0.85rem;
+  padding: 6px 10px;
+}
+
+/* 🔙 Botón de volver */
+.btn-return {
+  display: block;
+  text-align: center;
+  margin-top: 25px;
+  background-color: #9c88ff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-return:hover {
+  background-color: #8c7ae6;
+  transform: scale(1.05);
+}
