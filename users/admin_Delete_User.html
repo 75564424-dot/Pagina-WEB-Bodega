@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eliminar Usuario</title>
+    <!-- CSS Globales -->
+    <link rel="stylesheet" href="../assets/css/reset-styles.css">
+    <link rel="stylesheet" href="../assets/css/global-styles.css">
+
+    <!-- CSS Particular para Usuarios -->
+    <link rel="stylesheet" href="user-styles.css">
+</head>
+<body>
+  <main class="profile-section">
+    <h2 class="profile-card__title">🗑️ Eliminar Usuario</h2>
+    <p style="color: var(--color-text-muted); margin-bottom: 1rem;">
+      Busca al usuario que deseas eliminar. Ten en cuenta que esta acción es irreversible, 
+      y todos los datos asociados al usuario serán eliminados del sistema.
+    </p>
+
+    <!-- 🔍 Buscador -->
+    <div class="search-filter-section">
+      <input type="text" class="search-bar" placeholder="🔍 Buscar usuario por nombre o correo...">
+      <button class="button button--primary">Buscar</button>
+    </div>
+
+    <!-- ⚠️ Advertencia -->
+    <div class="profile-card" style="border-left: 5px solid red; margin-top: 1.5rem;">
+      <h3 style="color: red; margin-bottom: 0.8rem;">⚠️ Advertencia</h3>
+      <p>
+        Estás a punto de eliminar un usuario.  
+        Esta acción no se puede deshacer. Por favor confirma que deseas proceder.
+      </p>
+    </div>
+
+    <!-- 📋 Tabla de usuarios encontrados -->
+    <div class="profile-card" style="margin-top: 1.5rem;">
+      <table class="profile-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Rol</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>02</td>
+            <td>Ana Gómez</td>
+            <td>anagomez@email.com</td>
+            <td>Cliente</td>
+            <td>
+              <button class="button" style="background-color: red; color: white;">🗑️ Eliminar definitivamente</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Botón de regreso -->
+    <div style="margin-top: 2rem; text-align: center;">
+      <a href="admin_perfil.html" class="button button--primary">⬅️ Volver a lista de usuarios</a>
+    </div>
+  </main>
+</body>
+</html>

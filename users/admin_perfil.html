@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administración</title>
+    <!-- CSS Globales -->
+    <link rel="stylesheet" href="../assets/css/reset-styles.css">
+    <link rel="stylesheet" href="../assets/css/global-styles.css">
+
+    <!-- CSS Particular para Usuarios -->
+    <link rel="stylesheet" href="user-styles.css">
+</head>
+<body>
+  <div class="admin-layout">
+    <!-- 📌 Sidebar -->
+    <aside class="sidebar">
+      <h2 class="sidebar__title">Panel Admin</h2>
+      <nav class="sidebar__nav">
+        <ul>
+          <li><a href="#crud-perfiles" class="sidebar__link">👤 Perfiles</a></li>
+          <li><a href="#crud-productos" class="sidebar__link">📦 Productos</a></li>
+          <li><a href="#crud-entradas" class="sidebar__link">📥 Entradas</a></li>
+          <li><a href="#crud-categorias" class="sidebar__link">🏷️ Categorías</a></li>
+          <li><a href="#crud-ventas" class="sidebar__link">💲 Ventas</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- 📌 Contenido principal -->
+    <main class="admin-main">
+      <header class="admin-header">
+        <h1>Administración del Sistema</h1>
+        <p>Bienvenido, aquí puedes gestionar los usuarios, productos, entradas, categorías y ventas.</p>
+      </header>
+
+      <!-- CRUD Perfiles -->
+      <section id="crud-perfiles" class="crud-section">
+        <h2>👤 Gestión de Perfiles</h2>
+        <p>Aquí puedes crear nuevos usuarios, asignar roles y editar o eliminar usuarios existentes.</p>
+        <div class="crud-card">
+          <a href="admin_Create_User.html" class="button button--primary">➕ Crear Usuario</a>
+          <table class="profile-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Rol</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>01</td>
+                <td>Juan Pérez</td>
+                <td>Admin</td>
+                <td>
+                    <a href="admin_Read_User.html" class="button">👥 Ver todos los usuarios</a>
+                    <a href="admin_Edit_User.html" class="button">✏️ Editar</a>
+                    <a href="admin_Delete_User.html" class="button">🗑️ Eliminar</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- CRUD Productos -->
+      <section id="crud-productos" class="crud-section">
+        <h2>📦 Gestión de Productos</h2>
+        <p>Aquí puedes crear, editar o eliminar productos. El stock se gestiona en Entradas.</p>
+        <div class="crud-card">
+          <a href="../products/admin_Create_Product.html" class="button button--primary">➕ Crear Producto</a>
+          <table class="profile-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Producto</th>
+                <th>Categoría</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>101</td>
+                <td>Mouse Gamer</td>
+                <td>Accesorios</td>
+                <td>
+                  <a href="../products/admin_Read_Product.html" class="button">👥 Ver todos los productos</a>
+                  <a href="../products/admin_Edit_Product.html" class="button">✏️ Editar</a>
+                  <a href="../products/admin_Delete_Product.html" class="button">🗑️ Eliminar</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- CRUD Entradas -->
+      <section id="crud-entradas" class="crud-section">
+        <h2>📥 Gestión de Entradas</h2>
+        <p>Registra nuevos productos, asigna categorías y define su stock.</p>
+        <div class="crud-card">
+          <a href="../inventory/admin_Entradas.html" class="button button--primary">➕ Nueva Entrada</a>
+          <table class="profile-table">
+            <thead>
+              <tr>
+                <th>ID Entrada</th>
+                <th>Producto</th>
+                <th>Categoría</th>
+                <th>Stock</th>
+                <th>Fecha</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>5001</td>
+                <td>Teclado Mecánico</td>
+                <td>Accesorios</td>
+                <td>20</td>
+                <td>2025-10-18</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- CRUD Categorías -->
+      <section id="crud-categorias" class="crud-section">
+        <h2>🏷️ Gestión de Categorías</h2>
+        <div class="crud-card">
+          <a href="../category/admin_Create_category.html" class="button button--primary">➕ Crear Categoria</a>
+          <table class="profile-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre Categoría</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>10</td>
+                <td>Dulces</td>
+                <td>
+                  <a href="../category/admin_Read_category.html" class="button">👥 Ver todos las categorias</a>
+                  <a href="../category/admin_Edit_category.html" class="button">✏️ Editar</a>
+                  <a href="../category/admin_Delete_category.html" class="button">🗑️ Eliminar</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- CRUD Ventas -->
+      <section id="crud-ventas" class="crud-section">
+        <h2>💲 Gestión de Ventas</h2>
+        <p>Aquí puedes consultar todas las ventas registradas automáticamente.</p>
+        <div class="crud-card">
+          <table class="profile-table">
+            <thead>
+              <tr>
+                <th>ID Venta</th>
+                <th>Cliente</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Fecha</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>9001</td>
+                <td>Ana López</td>
+                <td>Mouse Gamer</td>
+                <td>2</td>
+                <td>2025-10-18</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 📊 Métricas -->
+      <section class="metrics-section">
+        <h2>📊 Métricas del Sistema</h2>
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <h3>Ventas Hoy</h3>
+            <p>25</p>
+          </div>
+          <div class="metric-card">
+            <h3>Ventas Semana</h3>
+            <p>140</p>
+          </div>
+          <div class="metric-card">
+            <h3>Ventas Mes</h3>
+            <p>520</p>
+          </div>
+          <div class="metric-card">
+            <h3>Ventas Año</h3>
+            <p>4800</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

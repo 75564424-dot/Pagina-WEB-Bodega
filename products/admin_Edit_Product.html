@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Producto</title>
+    <!-- CSS Globales -->
+    <link rel="stylesheet" href="../assets/css/reset-styles.css">
+    <link rel="stylesheet" href="../assets/css/global-styles.css">
+
+    <!-- CSS Particular para Usuarios -->
+    <link rel="stylesheet" href="producst-styles.css">
+</head>
+<body>
+  <main class="product-list-container">
+    <header class="product-list-header">
+      <h2>✏️ Editar Producto</h2>
+    </header>
+
+    <!-- 🔍 Buscador -->
+    <section class="search-filter-section">
+      <input type="text" class="search-bar" placeholder="🔍 Buscar producto por nombre o ID...">
+    </section>
+
+    <!-- 📋 Tabla de productos para elegir cuál editar -->
+    <div class="product-table-container">
+      <table class="product-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Precio (S/.)</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>01</td>
+            <td>Agua cielo</td>
+            <td>Bebidas</td>
+            <td>1.50</td>
+            <td>
+              <a href="#" class="button">✏️ Seleccionar</a>
+            </td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>Galletas Oreo</td>
+            <td>Galletas</td>
+            <td>2.50</td>
+            <td>
+              <a href="#" class="button">✏️ Seleccionar</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 📌 Formulario de edición -->
+    <section id="form-editar" class="form-container">
+      <h2>Actualizar Información del Producto</h2>
+      <form>
+        <div class="form-field">
+          <label for="nombre" class="form-label">Nombre del producto</label>
+          <input type="text" id="nombre" name="nombre" class="form-input" value="Galleta Oreo">
+        </div>
+
+        <div class="form-field">
+          <label for="categoria" class="form-label">Categoría</label>
+          <select id="categoria" name="categoria" class="form-input">
+            <option selected>Bebidas</option>
+            <option>Galletas</option>
+            <option>Snacks</option>
+            <option>Dulces</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="precio" class="form-label">Precio (S/.)</label>
+          <input type="number" id="precio" name="precio" class="form-input" value="120.00" step="0.01">
+        </div>
+
+        <div class="form-field">
+          <label for="descripcion" class="form-label">Descripción</label>
+          <textarea id="descripcion" name="descripcion" class="form-input" rows="4">Galleta Oreo...</textarea>
+        </div>
+
+        <button type="submit" class="button button--primary">💾 Guardar Cambios</button>
+        <a href="../users/admin_perfil.html" class="button button--primary">⬅️ Cancelar</a>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

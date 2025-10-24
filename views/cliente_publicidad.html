@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publicidad - Cliente</title>
+
+  <!-- Reset y estilos globales -->
+  <link rel="stylesheet" href="../assets/css/reset-styles.css">
+  <link rel="stylesheet" href="../assets/css/global-styles.css">
+
+  <!-- Estilos propios de publicidad -->
+  <link rel="stylesheet" href="views-styles.css">
+  <!-- CSS prestado de inventario solo para los botones de navegacion-->
+  <link rel="stylesheet" href="../inventory/inventory-styles.css">
+</head>
+<body>
+  <!-- 📌 Cabecera -->
+  <header class="publicity-header">
+    <img src="../assets/images/Bodega.png" alt="Logo de la tienda" class="publicity-header__logo">
+    <h1 class="publicity-header__title">📢</h1>
+    <nav class="main-navigation">
+      <a href="../inventory/cliente-main.html" class="nav-button">Inicio</a>
+      <a href="../inventory/cliente_inventario.html" class="nav-button">inventario</a>
+      <a href="cliente_publicidad.html" class="nav-button">publicidad</a>
+      <a href="../sales/cliente_carrito.html" class="nav-button">Carrito</a>
+      <a href="../users/cliente_perfil.html" class="nav-button">Mi Perfil</a>
+      <a href="../users/cliente_login.html" class="nav-button nav-button--logout">Cerrar Sesión</a>
+        </nav>
+  </header>
+
+  <!-- 📌 Contenedor principal -->
+  <main class="publicity-container">
+    <!-- Tarjeta de publicidad -->
+    <article class="publicity-card">
+      <img src="../assets/images/publicity-1.png" alt="Publicidad orgánicos" class="publicity-card__image">
+      <div class="publicity-card__content">
+        <h2 class="publicity-card__title">Nueva Línea de Productos Orgánicos</h2>
+        <p class="publicity-card__description">
+          Descubre nuestra colección de productos 100% naturales, pensados para un estilo de vida saludable.
+        </p>
+      </div>
+    </article>
+
+    <article class="publicity-card">
+      <img src="../assets/images/publicity-2.png" alt="Publicidad tecnología" class="publicity-card__image">
+      <div class="publicity-card__content">
+        <h2 class="publicity-card__title">Tecnología para tu Hogar</h2>
+        <p class="publicity-card__description">
+          Explora dispositivos inteligentes que harán tu día más fácil y seguro.
+        </p>
+      </div>
+    </article>
+
+    <article class="publicity-card">
+      <img src="../assets/images/publicity-3.png" alt="Publicidad ambiental" class="publicity-card__image">
+      <div class="publicity-card__content">
+        <h2 class="publicity-card__title">Campaña de Cuidado Ambiental</h2>
+        <p class="publicity-card__description">
+          Únete a nuestras iniciativas para un futuro más sostenible. Cada acción cuenta.
+        </p>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

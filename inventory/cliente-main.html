@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú Principal - Cliente</title>
+    <!-- CSS Globales -->
+    <link rel="stylesheet" href="../assets/css/reset-styles.css">
+    <link rel="stylesheet" href="../assets/css/global-styles.css">
+
+    <!-- CSS Particular para Inventario-->
+    <link rel="stylesheet" href="inventory-styles.css">
+</head>
+</head>
+<body>
+  <!-- ============================================= -->
+  <!-- CABECERA PRINCIPAL -->
+  <!-- ============================================= -->
+  <header class="main-header">
+    <img src="../assets/images/Bodega.png" alt="Logo Bodega" class="main-header__logo">
+    <nav class="main-navigation">
+      <a href="cliente-main.html" class="nav-button">Inicio</a>
+      <a href="cliente_inventario.html" class="nav-button">inventario</a>
+      <a href="../views/cliente_publicidad.html" class="nav-button">publicidad</a>
+      <a href="../sales/cliente_carrito.html" class="nav-button">Carrito</a>
+      <a href="../users/cliente_perfil.html" class="nav-button">Mi Perfil</a>
+      <a href="../users/cliente_login.html" class="nav-button nav-button--logout">Cerrar Sesión</a>
+    </nav>
+  </header>
+
+  <!-- ============================================= -->
+  <!-- SECCIÓN DE BIENVENIDA -->
+  <!-- ============================================= -->
+  <main class="main-container">
+    <h1 class="welcome-title">¡Bienvenido a tu Bodega Virtual! 🛒</h1>
+    <p class="welcome-subtitle">Explora productos, descubre ofertas y gestiona tus pedidos de forma sencilla.</p>
+
+    <!-- ============================================= -->
+    <!-- MENÚ PRINCIPAL CON TARJETAS -->
+    <!-- ============================================= -->
+    <section class="menu-section">
+      <div class="menu-card">
+        <img src="../assets/images/abarrotes.arroz.Costeño.png" alt="Categoría Abarrotes" class="menu-card__image">
+        <h2 class="menu-card__title">Abarrotes</h2>
+        <p class="menu-card__description">Encuentra arroz, azúcar, fideos y más productos básicos para tu hogar.</p>
+      </div>
+
+      <div class="menu-card">
+        <img src="../assets/images/bebida.Inca.Kola.png" alt="Categoría Bebidas" class="menu-card__image">
+        <h2 class="menu-card__title">Bebidas</h2>
+        <p class="menu-card__description">Refrescos, jugos y aguas minerales al mejor precio.</p>
+      </div>
+
+      <div class="menu-card">
+        <img src="../assets/images/snack.galletas.Oreo.png" alt="Categoría Snacks" class="menu-card__image">
+        <h2 class="menu-card__title">Snacks</h2>
+        <p class="menu-card__description">Galletas, papas y dulces para disfrutar en cualquier momento.</p>
+      </div>
+
+      <div class="menu-card">
+        <img src="../assets/images/articulo.limpieza.detergente.Ariel.png" alt="Categoría Limpieza" class="menu-card__image">
+        <h2 class="menu-card__title">Limpieza</h2>
+        <p class="menu-card__description">Productos para mantener tu hogar impecable y fresco.</p>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- SECCIÓN DE INFORMACIÓN EXTRA -->
+    <!-- ============================================= -->
+    <section class="menu-section">
+      <div class="menu-card">
+        <img src="../assets/images/metodo.pago.Tarjeta.png" alt="Métodos de pago" class="menu-card__image">
+        <h2 class="menu-card__title">Métodos de Pago</h2>
+        <p class="menu-card__description">Aceptamos pagos en efectivo, tarjeta y PayPal.</p>
+      </div>
+
+      <div class="menu-card">
+        <img src="../assets/images/Icono informativo horario de atencion.png" alt="Horario de atención" class="menu-card__image">
+        <h2 class="menu-card__title">Horario de Atención</h2>
+        <p class="menu-card__description">Lunes a Domingo: 8:00 AM - 10:00 PM</p>
+      </div>
+
+      <div class="menu-card">
+        <img src="../assets/images/Bodega.png" alt="Soporte al cliente" class="menu-card__image">
+        <h2 class="menu-card__title">Soporte</h2>
+        <p class="menu-card__description">¿Necesitas ayuda? Contáctanos al 📞 01-800-123-456.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

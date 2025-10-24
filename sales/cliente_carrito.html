@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Cliente</title>
+
+    <!-- Reset y estilos globales -->
+    <link rel="stylesheet" href="../assets/css/reset-styles.css">
+    <link rel="stylesheet" href="../assets/css/global-styles.css">
+
+    <!-- Estilos específicos para carrito -->
+    <link rel="stylesheet" href="sales-styles.css">
+    <!-- CSS prestado de inventario solo para los botones de navegacion-->
+    <link rel="stylesheet" href="../inventory/inventory-styles.css">
+</head>
+<body>
+    <!-- 📌 Cabecera -->
+    <header class="cart-header">
+        <img src="../assets/images/Bodega.png" alt="Logo de la tienda" class="cart-header__logo">
+        <h1 class="cart-header__title">🛒 </h1>
+        <nav class="main-navigation">
+        <a href="../inventory/cliente-main.html" class="nav-button">Inicio</a>
+        <a href="../users/cliente_perfil.html" class="nav-button">Mi Perfil</a>
+        <a href="../users/cliente_login.html" class="nav-button nav-button--logout">Cerrar Sesión</a>
+        </nav>
+    </header>
+
+    <!-- 📌 Contenedor principal -->
+    <main class="cart-container">
+        <!-- Lista de productos -->
+        <section class="cart-products">
+            <!-- Ejemplo de producto en carrito -->
+            <article class="cart-item">
+                <img src="../assets/images/abarrotes.arroz.Costeño.png" alt="Producto 1" class="cart-item__image">
+                <div class="cart-item__details">
+                    <h2 class="cart-item__name">Producto de Ejemplo</h2>
+                    <p class="cart-item__description">Descripción breve del producto.</p>
+                    <p class="cart-item__price">Precio: $20.00</p>
+                    <div class="cart-item__controls">
+                        <label for="quantity1">Cantidad:</label>
+                        <input type="number" id="quantity1" class="cart-item__quantity" value="1" min="1">
+                        <button class="button button--secondary cart-item__remove">❌ Eliminar</button>
+                    </div>
+                    <p class="cart-item__subtotal">Subtotal: $20.00</p>
+                </div>
+            </article>
+
+            <article class="cart-item">
+                <img src="../assets/images/bebida.Inca.Kola.png" alt="Producto 2" class="cart-item__image">
+                <div class="cart-item__details">
+                    <h2 class="cart-item__name">Otro Producto</h2>
+                    <p class="cart-item__description">Otra breve descripción.</p>
+                    <p class="cart-item__price">Precio: $15.00</p>
+                    <div class="cart-item__controls">
+                        <label for="quantity2">Cantidad:</label>
+                        <input type="number" id="quantity2" class="cart-item__quantity" value="2" min="1">
+                        <button class="button button--secondary cart-item__remove">❌ Eliminar</button>
+                    </div>
+                    <p class="cart-item__subtotal">Subtotal: $30.00</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- 📌 Resumen de compra -->
+        <aside class="cart-summary">
+            <h2 class="cart-summary__title">Resumen de Compra</h2>
+            <p class="cart-summary__line">Subtotal: <span>$50.00</span></p>
+            <p class="cart-summary__line">Impuestos: <span>$5.00</span></p>
+            <p class="cart-summary__line cart-summary__total">Total: <span>$55.00</span></p>
+            <button class="button button--primary cart-summary__checkout">💳 Proceder al Pago</button>
+        </aside>
+    </main>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Cliente - Bodega</title>
+
+    <!-- CSS Globales -->
+    <link rel="stylesheet" href="../assets/css/reset-styles.css">
+    <link rel="stylesheet" href="../assets/css/global-styles.css">
+
+    <!-- CSS Particular para Usuarios -->
+    <link rel="stylesheet" href="user-styles.css">
+</head>
+<body>
+    <main class="login-page-container">
+        <section class="login-card">
+            
+            <!-- Logo -->
+            <img src="../assets/images/Bodega.png" alt="Logo de la Bodega" class="login-card__logo">
+
+            <!-- Título -->
+            <h1 class="login-card__title">Acceso Cliente</h1>
+
+            <!-- Formulario de Login -->
+            <form action="../inventory/cliente-main.html" method="post" class="login-form">
+                
+                <!-- Campo: Correo electrónico -->
+                <div class="form-field">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <!-- Campo: Contraseña -->
+                <div class="form-field">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" id="password" name="password" class="form-input" placeholder="********" required>
+                </div>
+
+                <!-- Botón: Iniciar sesión -->
+                <button type="submit" class="button button--primary">Iniciar Sesión</button>
+
+                <!-- Enlace: Registro -->
+                <p class="login-form__footer">
+                    ¿No tienes cuenta? 
+                    <a href="register.html" class="link--highlight">Regístrate aquí</a>
+                </p>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

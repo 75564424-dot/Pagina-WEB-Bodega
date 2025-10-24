@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Categorías</title>
+  <!-- CSS Globales -->
+    <link rel="stylesheet" href="../assets/css/reset-styles.css">
+    <link rel="stylesheet" href="../assets/css/global-styles.css">
+
+    <!-- CSS Particular para Usuarios -->
+    <link rel="stylesheet" href="category-styles.css">
+</head>
+<body>
+    
+  <!-- 📝 Formulario para crear categorías -->
+  <section class="form-container">
+    <h2>➕ Crear Nueva Categoría</h2>
+    <form>
+      <div class="form-group">
+        <label for="categoria-nombre">Nombre de la categoría</label>
+        <input type="text" id="categoria-nombre" name="categoria-nombre" placeholder="Ejemplo: Bebidas" required>
+      </div>
+
+      <div class="form-group">
+        <label for="categoria-descripcion">Descripción</label>
+        <textarea id="categoria-descripcion" name="categoria-descripcion" placeholder="Ejemplo: Productos líquidos como gaseosas, jugos, agua..." required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="categoria-estado">Estado</label>
+        <select id="categoria-estado" name="categoria-estado">
+          <option value="activo">Activo</option>
+          <option value="inactivo">Inactivo</option>
+        </select>
+      </div>
+
+      <button type="submit" class="button button--primary">Guardar Categoría</button>
+    </form>
+  </section>
+  <!-- Botones de acción -->
+        <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem;">
+          <a href="../users/admin_perfil.html" class="button button--primary">↩️ Cancelar</a>
+        </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Usuario</title>
+    <!-- CSS Globales -->
+    <link rel="stylesheet" href="../assets/css/reset-styles.css">
+    <link rel="stylesheet" href="../assets/css/global-styles.css">
+
+    <!-- CSS Particular para Usuarios -->
+    <link rel="stylesheet" href="user-styles.css">
+</head>
+<body>
+  <main class="login-page-container">
+    <section class="login-card">
+      <h2 class="login-card__title">✏️ Editar Usuario</h2>
+      <p style="margin-bottom:1rem; color: var(--color-text-muted);">
+        Modifica los datos del usuario seleccionado y guarda los cambios.
+      </p>
+
+      <form class="login-form">
+        <!-- ID de Usuario (solo lectura) -->
+        <div class="form-field">
+          <label for="id" class="form-label">ID de Usuario</label>
+          <input type="text" id="id" name="id" class="form-input" value="01" readonly>
+        </div>
+
+        <!-- Nombre -->
+        <div class="form-field">
+          <label for="nombre" class="form-label">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" class="form-input" value="Juan Pérez" required>
+        </div>
+
+        <!-- Email -->
+        <div class="form-field">
+          <label for="email" class="form-label">Correo electrónico</label>
+          <input type="email" id="email" name="email" class="form-input" value="juanperez@email.com" required>
+        </div>
+
+        <!-- Contraseña -->
+        <div class="form-field">
+          <label for="password" class="form-label">Contraseña</label>
+          <input type="password" id="password" name="password" class="form-input" placeholder="********">
+          <small style="color: var(--color-text-muted); font-size:0.85rem;">Dejar en blanco si no deseas cambiar la contraseña.</small>
+        </div>
+
+        <!-- Rol -->
+        <div class="form-field">
+          <label for="rol" class="form-label">Rol del usuario</label>
+          <select id="rol" name="rol" class="form-input" required>
+            <option value="admin">Administrador</option>
+            <option value="cliente" selected>Cliente</option>
+            <option value="zootecnico">Zootécnico</option>
+          </select>
+        </div>
+        
+        <!-- Botones de acción -->
+        <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem;">
+          <button type="submit" class="button button--primary">💾 Guardar Cambios</button>
+          <a href="admin_perfil.html" class="button">↩️ Cancelar</a>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

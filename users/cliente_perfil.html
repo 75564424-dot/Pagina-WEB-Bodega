@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil del Cliente</title>
+    <!-- CSS Globales -->
+    <link rel="stylesheet" href="../assets/css/reset-styles.css">
+    <link rel="stylesheet" href="../assets/css/global-styles.css">
+
+    <!-- CSS prestado de Inventario -->
+    <link rel="stylesheet" href="../inventory/inventory-styles.css">
+
+    <!-- CSS particular para users -->
+    <link rel="stylesheet" href="user-styles.css">
+</head>
+<body>
+  <!-- ============================================= -->
+  <!-- CABECERA -->
+  <!-- ============================================= -->
+  <header class="main-header">
+    <img src="../assets/images/Bodega.png" alt="Logo Bodega" class="main-header__logo">
+    <nav class="main-navigation">
+      <a href="../inventory/cliente-main.html" class="nav-button">Inicio</a>
+      <a href="../inventory/cliente_inventario.html" class="nav-button">inventario</a>
+      <a href="../views/cliente_publicidad.html" class="nav-button">publicidad</a>
+      <a href="../sales/cliente_carrito.html" class="nav-button">Carrito</a>
+      <a href="cliente_perfil.html" class="nav-button">Mi Perfil</a>
+      <a href="cliente_login.html" class="nav-button nav-button--logout">Cerrar Sesión</a>
+    </nav>
+  </header>
+
+  <!-- ============================================= -->
+  <!-- CONTENIDO PRINCIPAL DEL PERFIL -->
+  <!-- ============================================= -->
+  <main class="main-container">
+    <!-- Sección información del cliente -->
+    <section class="profile-section">
+      <h1 class="welcome-title">👤 Mi Perfil</h1>
+      <p class="welcome-subtitle">Revisa y actualiza tu información personal</p>
+
+      <div class="profile-card">
+        <h2 class="profile-card__title">Datos Personales</h2>
+        <p><strong>Nombre:</strong> Juan Pérez</p>
+        <p><strong>DNI:</strong> 12345678</p>
+        <p><strong>Correo:</strong> juan.perez@example.com</p>
+      </div>
+    </section>
+
+    <!-- Sección historial de compras -->
+    <section class="profile-section">
+      <h2 class="profile-card__title">🛍️ Historial de Compras</h2>
+      <table class="profile-table">
+        <thead>
+          <tr>
+            <th>Número Pedido</th>
+            <th>Fecha</th>
+            <th>Total</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#1001</td>
+            <td>15/10/2025</td>
+            <td>S/ 75.00</td>
+            <td>Entregado</td>
+          </tr>
+          <tr>
+            <td>#1002</td>
+            <td>18/10/2025</td>
+            <td>S/ 120.00</td>
+            <td>Pendiente</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Sección métodos de pago -->
+    <section class="profile-section">
+      <h2 class="profile-card__title">💳 Métodos de Pago</h2>
+      <div class="payment-methods">
+        <img src="../assets/images/metodo.pago.PayPal.png" alt="PayPal" class="payment-icon">
+        <img src="../assets/images/metodo.pago.Tarjeta.png" alt="Tarjeta" class="payment-icon">
+        <img src="../assets/images/metodo.pago.Pago.Efectivo.png" alt="Efectivo" class="payment-icon">
+      </div>
+    </section>
+  </main>
+</body>
+</html>

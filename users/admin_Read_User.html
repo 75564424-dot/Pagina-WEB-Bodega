@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Usuarios</title>
+    <!-- CSS Globales -->
+    <link rel="stylesheet" href="../assets/css/reset-styles.css">
+    <link rel="stylesheet" href="../assets/css/global-styles.css">
+
+    <!-- CSS Particular para Usuarios -->
+    <link rel="stylesheet" href="user-styles.css">
+</head>
+<body>
+  <main class="profile-section">
+    <h2 class="profile-card__title">👥 Lista de Usuarios</h2>
+    <p style="color: var(--color-text-muted); margin-bottom: 1.5rem;">
+      Aquí puedes visualizar todos los usuarios registrados en el sistema.  
+      Usa el buscador para encontrar rápidamente a un usuario en particular.
+    </p>
+
+    <!-- 🔍 Barra de búsqueda -->
+    <div class="search-filter-section">
+      <input type="text" class="search-bar" placeholder="🔍 Buscar usuario por nombre o correo...">
+      <button class="button button--primary">Buscar</button>
+    </div>
+
+    <!-- 📋 Tabla de usuarios -->
+    <div class="profile-card">
+      <table class="profile-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Rol</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>01</td>
+            <td>Juan Pérez</td>
+            <td>juanperez@email.com</td>
+            <td>Admin</td>
+            <td>
+              <a href="admin_Edit_User.html" class="button">✏️ Editar</a>
+              <a href="admin_Delete_User.html" class="button">🗑️ Eliminar</a>
+            </td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>Ana Gómez</td>
+            <td>anagomez@email.com</td>
+            <td>Cliente</td>
+            <td>
+              <a href="admin_Edit_User.html" class="button">✏️ Editar</a>
+              <a href="admin_Delete_User.html" class="button">🗑️ Eliminar</a>
+            </td>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td>Carlos Torres</td>
+            <td>carlos@email.com</td>
+            <td>Cliente</td>
+            <td>
+              <a href="admin_Edit_User.html" class="button">✏️ Editar</a>
+              <a href="admin_Delete_User.html" class="button">🗑️ Eliminar</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ➕ Botón crear -->
+    <div style="margin-top: 2rem; text-align: center;">
+      <a href="admin_Create_User.html" class="button button--primary">➕ Crear nuevo usuario</a>
+      <a href="admin_perfil.html" class="button button--primary">↩️ Cancelar</a>
+    </div>
+  </main>
+</body>
+</html>

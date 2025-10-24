@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventario de Productos</title>
+    <!-- CSS Globales -->
+    <link rel="stylesheet" href="../assets/css/reset-styles.css">
+    <link rel="stylesheet" href="../assets/css/global-styles.css">
+
+    <!-- CSS Particular para Inventario-->
+    <link rel="stylesheet" href="inventory-styles.css">
+</head>
+<body>
+  <!-- ============================================= -->
+  <!-- CABECERA -->
+  <!-- ============================================= -->
+  <header class="main-header">
+    <img src="../assets/images/Bodega.png" alt="Logo Bodega" class="main-header__logo">
+    <nav class="main-navigation">
+      <a href="cliente-main.html" class="nav-button">Inicio</a>
+      <a href="cliente_inventario.html" class="nav-button">Inventario</a>
+      <a href="../views/cliente_publicidad.html" class="nav-button">publicidad</a>
+      <a href="../sales/cliente_carrito.html" class="nav-button">Carrito</a>
+      <a href="../users/cliente_perfil.html" class="nav-button">Mi Perfil</a>
+      <a href="../users/cliente_login.html" class="nav-button nav-button--logout">Cerrar Sesión</a>
+    </nav>
+  </header>
+
+  <!-- ============================================= -->
+  <!-- CONTENIDO PRINCIPAL -->
+  <!-- ============================================= -->
+  <main class="main-container">
+    <h1 class="welcome-title">Inventario de Productos</h1>
+    <p class="welcome-subtitle">Busca, filtra y selecciona los productos que necesitas</p>
+
+    <!-- ============================================= -->
+    <!-- BARRA DE BÚSQUEDA Y FILTRO -->
+    <!-- ============================================= -->
+    <section class="search-filter-section">
+      <!-- 🔍 Buscador -->
+      <input 
+        type="text" 
+        class="search-bar" 
+        placeholder="Buscar productos..."
+      >
+
+      <!-- 🏷️ Filtro de categorías -->
+      <select class="filter-dropdown">
+        <option value="all">Todas las categorías</option>
+        <option value="abarrotes">Abarrotes</option>
+        <option value="bebidas">Bebidas</option>
+        <option value="snacks">Snacks</option>
+        <option value="limpieza">Limpieza</option>
+      </select>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- LISTADO DE PRODUCTOS -->
+    <!-- ============================================= -->
+    <section class="product-grid">
+      <!-- Ejemplo Producto -->
+      <div class="product-card">
+        <img src="../assets/images/abarrotes.arroz.Costeño.png" alt="Arroz Costeño" class="product-card__image">
+        <h2 class="product-card__name">Arroz Costeño 5kg</h2>
+        <p class="product-card__description">Arroz de grano largo, ideal para tu mesa diaria.</p>
+        <p class="product-card__price">S/ 20.00</p>
+        <button class="button button--primary">Agregar al carrito</button>
+      </div>
+
+      <div class="product-card">
+        <img src="../assets/images/bebida.Inca.Kola.png" alt="Inca Kola" class="product-card__image">
+        <h2 class="product-card__name">Inca Kola 1.5L</h2>
+        <p class="product-card__description">La bebida de sabor nacional, refrescante y única.</p>
+        <p class="product-card__price">S/ 6.50</p>
+        <button class="button button--primary">Agregar al carrito</button>
+      </div>
+
+      <div class="product-card">
+        <img src="../assets/images/snack.galletas.Oreo.png" alt="Galletas Oreo" class="product-card__image">
+        <h2 class="product-card__name">Galletas Oreo</h2>
+        <p class="product-card__description">Clásicas galletas de chocolate con relleno de vainilla.</p>
+        <p class="product-card__price">S/ 3.50</p>
+        <button class="button button--primary">Agregar al carrito</button>
+      </div>
+
+      <div class="product-card">
+        <img src="../assets/images/articulo.limpieza.detergente.Ariel.png" alt="Detergente Ariel" class="product-card__image">
+        <h2 class="product-card__name">Detergente Ariel</h2>
+        <p class="product-card__description">Máxima limpieza y frescura para tu ropa.</p>
+        <p class="product-card__price">S/ 15.00</p>
+        <button class="button button--primary">Agregar al carrito</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

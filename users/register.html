@@ -1,50 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro de Usuario - Sistema de Ventas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Cliente - Bodega</title>
 
-  <!-- 🔗 Estilos globales y específicos del módulo de usuarios -->
-  <link rel="stylesheet" href="../assets/css/styles.css">
-  <link rel="stylesheet" href="users.css">
+    <!-- CSS Globales -->
+    <link rel="stylesheet" href="../assets/css/reset-styles.css">
+    <link rel="stylesheet" href="../assets/css/global-styles.css">
+
+    <!-- CSS Particular para Usuarios -->
+    <link rel="stylesheet" href="user-styles.css">
 </head>
-<body class="user-register-body">
-  <!-- 🧱 Contenedor principal del área de registro -->
-  <div class="user-register-container">
-    <!-- 💳 Tarjeta visual del formulario con animación de entrada -->
-    <div class="user-register-card animate-fade">
-      <h1 class="user-register-title">Crear cuenta</h1>
-      <p class="user-register-subtitle">Regístrate para comenzar tus compras</p>
+<body>
+    <main class="login-page-container">
+        <section class="login-card">
+            
+            <!-- Logo -->
+            <img src="../assets/images/Bodega.png" alt="Logo de la Bodega" class="login-card__logo">
 
-      <!-- 📝 Formulario principal de registro -->
-      <form class="user-register-form" action="../users/user_dashboard.html" method="post">
-        <!-- 🧍 Nombre completo -->
-        <label for="user-register-name">Nombre completo</label>
-        <input type="text" id="user-register-name" name="fullname" placeholder="Ejemplo: Juan Pérez" required>
+            <!-- Título -->
+            <h1 class="login-card__title">Crear Cuenta</h1>
 
-        <!-- 📧 Correo electrónico -->
-        <label for="user-register-email">Correo electrónico</label>
-        <input type="email" id="user-register-email" name="email" placeholder="usuario@correo.com" required>
+            <!-- Formulario de Registro -->
+            <form action="cliente_perfil.html" method="post" class="login-form">
+                
+                <!-- Campo: Nombre completo -->
+                <div class="form-field">
+                    <label for="full-name" class="form-label">Nombre completo</label>
+                    <input type="text" id="full-name" name="full-name" class="form-input" placeholder="Juan Pérez" required>
+                </div>
 
-        <!-- 🔒 Contraseña -->
-        <label for="user-register-password">Contraseña</label>
-        <input type="password" id="user-register-password" name="password" placeholder="********" required>
+                <!-- Campo: DNI -->
+                <div class="form-field">
+                    <label for="dni" class="form-label">DNI</label>
+                    <input type="text" id="dni" name="dni" class="form-input" placeholder="12345678" required>
+                </div>
 
-        <!-- 🔒 Confirmar contraseña -->
-        <label for="user-register-confirm">Confirmar contraseña</label>
-        <input type="password" id="user-register-confirm" name="confirm_password" placeholder="********" required>
+                <!-- Campo: Correo electrónico -->
+                <div class="form-field">
+                    <label for="register-email" class="form-label">Correo electrónico</label>
+                    <input type="email" id="register-email" name="register-email" class="form-input" placeholder="ejemplo@correo.com" required>
+                </div>
 
-        <!-- 🚪 Botón de acción para registrar -->
-        <button type="submit" class="btn-primary">Registrarme</button>
+                <!-- Campo: Contraseña -->
+                <div class="form-field">
+                    <label for="register-password" class="form-label">Contraseña</label>
+                    <input type="password" id="register-password" name="register-password" class="form-input" placeholder="********" required>
+                </div>
 
-        <!-- 🔗 Enlace alternativo hacia login -->
-        <p class="user-register-login-text">
-          ¿Ya tienes una cuenta?
-          <a href="login_user.html" class="user-register-link-login">Inicia sesión aquí</a>
-        </p>
-      </form>
-    </div>
-  </div>
+                <!-- Campo: Confirmar Contraseña -->
+                <div class="form-field">
+                    <label for="confirm-password" class="form-label">Confirmar Contraseña</label>
+                    <input type="password" id="confirm-password" name="confirm-password" class="form-input" placeholder="********" required>
+                </div>
+
+                <!-- Botón: Registrar -->
+                <button type="submit" class="button button--primary">Registrarse</button>
+
+                <!-- Enlace: Ir a login -->
+                <p class="login-form__footer">
+                    ¿Ya tienes cuenta? 
+                    <a href="cliente_login.html" class="link--highlight">Inicia sesión</a>
+                </p>
+            </form>
+        </section>
+    </main>
 </body>
 </html>

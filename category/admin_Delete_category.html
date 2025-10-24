@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eliminar / Desactivar Categoría</title>
+    <!-- CSS Globales -->
+    <link rel="stylesheet" href="../assets/css/reset-styles.css">
+    <link rel="stylesheet" href="../assets/css/global-styles.css">
+
+    <!-- CSS Particular para Usuarios -->
+    <link rel="stylesheet" href="category-styles.css">
+</head>
+<body>
+
+  <!-- 🔍 Buscador y filtro -->
+  <section class="search-filter-section">
+    <input type="text" class="search-bar" placeholder="🔎 Buscar categoría por nombre...">
+    
+    <select class="filter-dropdown">
+      <option value="todas">Todas</option>
+      <option value="activas" selected>Activas</option>
+      <option value="inactivas">Inactivas</option>
+    </select>
+
+    <button class="button button--primary">Filtrar</button>
+  </section>
+
+  <!-- 📋 Tabla de categorías -->
+  <section class="table-container">
+    <h2>📑 Listado de Categorías</h2>
+    <table class="category-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Estado</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Ejemplo de categoría activa -->
+        <tr>
+          <td>01</td>
+          <td>Bebidas</td>
+          <td>Jugos, gaseosas y bebidas energéticas</td>
+          <td>Activo</td>
+          <td><button class="button button--primary">Desactivar</button></td>
+        </tr>
+        <!-- Ejemplo de categoría inactiva -->
+        <tr>
+          <td>02</td>
+          <td>Lácteos</td>
+          <td>Leche, queso y derivados</td>
+          <td>Inactivo</td>
+          <td><button class="button button--primary">Activar</button></td>
+        </tr>
+        <tr>
+          <td>03</td>
+          <td>Higiene</td>
+          <td>Artículos de limpieza y cuidado personal</td>
+          <td>Activo</td>
+          <td><button class="button button--primary">Desactivar</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+    <!-- Botones de acción -->
+    <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem;">
+        <a href="../users/admin_perfil.html" class="button button--primary">↩️ Cancelar</a>
+    </div>
+</body>
+</html>

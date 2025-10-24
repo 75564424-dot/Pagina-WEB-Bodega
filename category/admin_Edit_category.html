@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Categoría</title>
+    <!-- CSS Globales -->
+    <link rel="stylesheet" href="../assets/css/reset-styles.css">
+    <link rel="stylesheet" href="../assets/css/global-styles.css">
+
+    <!-- CSS Particular para Usuarios -->
+    <link rel="stylesheet" href="category-styles.css">
+</head>
+<body>
+
+    <!-- 🔍 Buscador de categoría -->
+  <section class="search-filter-section">
+    <input type="text" class="search-bar" placeholder="🔎 Buscar categoría por nombre...">
+    <button class="button button--primary">Buscar</button>
+  </section>
+
+  <!-- 📋 Resultado encontrado -->
+  <section class="form-container">
+    <h2>Formulario de Edición</h2>
+    <form action="#" method="POST">
+      <!-- ID de categoría (solo lectura) -->
+      <div class="form-group">
+        <label for="category-id">ID Categoría</label>
+        <input type="text" id="category-id" name="category-id" value="03" readonly>
+      </div>
+
+      <!-- Nombre de categoría -->
+      <div class="form-group">
+        <label for="category-name">Nombre</label>
+        <input type="text" id="category-name" name="category-name" value="Higiene" required>
+      </div>
+
+      <!-- Descripción -->
+      <div class="form-group">
+        <label for="category-description">Descripción</label>
+        <textarea id="category-description" name="category-description" rows="3" required>Artículos de limpieza y cuidado personal.</textarea>
+      </div>
+
+      <!-- Estado -->
+      <div class="form-group">
+        <label for="category-status">Estado</label>
+        <select id="category-status" name="category-status" required>
+          <option value="activo" selected>Activo</option>
+          <option value="inactivo">Inactivo</option>
+        </select>
+      </div>
+
+      <!-- Botón -->
+      <button type="submit" class="button button--primary">Guardar Cambios</button>
+    </form>
+  </section>
+    <!-- Botones de acción -->
+    <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem;">
+        <a href="../users/admin_perfil.html" class="button button--primary">↩️ Cancelar</a>
+    </div>
+</body>
+</html>

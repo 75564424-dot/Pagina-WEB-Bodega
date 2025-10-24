@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eliminar Producto</title>
+    <!-- CSS Globales -->
+    <link rel="stylesheet" href="../assets/css/reset-styles.css">
+    <link rel="stylesheet" href="../assets/css/global-styles.css">
+
+    <!-- CSS Particular para Usuarios -->
+    <link rel="stylesheet" href="producst-styles.css">
+</head>
+<body>
+  <main class="product-list-container">
+    <header class="product-list-header">
+      <h2>🗑️ Eliminar Producto</h2>
+      <a href="../users/admin_perfil.html" class="button button--primary">⬅️ Volver al listado</a>
+    </header>
+
+    <!-- 🔍 Buscador -->
+    <section class="search-filter-section">
+      <input type="text" class="search-bar" placeholder="🔍 Buscar producto por nombre o ID...">
+    </section>
+
+    <!-- 📋 Tabla de productos -->
+    <div class="product-table-container">
+      <table class="product-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Precio (S/.)</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>01</td>
+            <td>Agua Cielo</td>
+            <td>Bebidas</td>
+            <td>1.50</td>
+            <td>
+              <a href="#" class="button">🗑️ Seleccionar</a>
+            </td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>Galleta Oreo</td>
+            <td>Galletas</td>
+            <td>2.50</td>
+            <td>
+              <a href="#" class="button">🗑️ Seleccionar</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 📌 Formulario de confirmación -->
+    <section id="form-eliminar" class="form-container">
+      <h2>Confirmar Eliminación</h2>
+      <form class="product-form">
+        <div class="form-group">
+          <label for="producto" class="form-label">Producto seleccionado</label>
+          <input type="text" id="producto" name="producto" class="form-input" value="Agua Cielo" readonly>
+        </div>
+
+        <p style="color: var(--color-text-muted); margin-top: 1rem; text-align:center;">
+          ⚠️ Esta acción no se puede deshacer. ¿Estás seguro de que deseas eliminar este producto?
+        </p>
+
+        <div class="form-actions">
+          <button type="submit" class="button button--primary">✅ Confirmar Eliminación</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

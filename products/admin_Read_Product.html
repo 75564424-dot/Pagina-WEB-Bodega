@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listado de Productos</title>
+    <!-- CSS Globales -->
+    <link rel="stylesheet" href="../assets/css/reset-styles.css">
+    <link rel="stylesheet" href="../assets/css/global-styles.css">
+
+    <!-- CSS Particular para Usuarios -->
+    <link rel="stylesheet" href="producst-styles.css">
+</head>
+<body>
+  <main class="product-list-container">
+    <header class="product-list-header">
+      <h2>📦 Gestión de Productos</h2>
+      <a href="admin_Create_Product.html" class="button button--primary">➕ Crear Producto</a>
+    </header>
+
+    <!-- 🔍 Buscador -->
+    <section class="search-filter-section">
+      <input type="text" class="search-bar" placeholder="🔍 Buscar por nombre o ID...">
+    </section>
+
+    <!-- 📋 Tabla de productos -->
+    <div class="product-table-container">
+      <table class="product-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Precio (S/.)</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Ejemplo de fila -->
+          <tr>
+            <td>01</td>
+            <td>Agua cielo</td>
+            <td>Bebidas</td>
+            <td>1.50</td>
+            <td>
+              <a href="admin_Edit_Product.html" class="button">✏️ Editar</a>
+              <a href="admin_Delete_Product.html" class="button">🗑️ Eliminar</a>
+            </td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>Galletas Oreo</td>
+            <td>Galletas</td>
+            <td>2.50</td>
+            <td>
+              <a href="admin_Edit_Product.html" class="button">✏️ Editar</a>
+              <a href="admin_Delete_Product.html" class="button">🗑️ Eliminar</a>
+            </td>
+          </tr>
+          <!-- Más filas generadas desde la BD -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Botones -->
+      <div class="form-actions">
+        <a href="../users/admin_perfil.html" class="button button--primary">⬅️ Cancelar</a>
+      </div>
+
+  </main>
+</body>
+</html>
