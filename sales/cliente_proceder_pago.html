@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proceder al Pago - Bodega</title>
+    <!-- Reset y estilos globales -->
+    <link rel="stylesheet" href="../assets/css/reset-styles.css">
+    <link rel="stylesheet" href="../assets/css/global-styles.css">
+
+    <!-- Estilos específicos para carrito -->
+    <link rel="stylesheet" href="sales-styles.css">
+    <!-- CSS prestado de inventario solo para los botones de navegacion-->
+    <link rel="stylesheet" href="../inventory/inventory-styles.css">
+</head>
+<body>
+
+  <!-- ======================= -->
+  <!-- CABECERA DE PAGO -->
+  <!-- ======================= -->
+  <header class="cart-header">
+    <img src="../assets/images/Bodega.png" alt="Logo Bodega" class="cart-header__logo">
+    <h1 class="cart-header__title">Proceder al Pago</h1>
+  </header>
+
+  <!-- ======================= -->
+  <!-- CONTENIDO PRINCIPAL -->
+  <!-- ======================= -->
+  <main class="cart-container">
+
+    <!-- 🧾 FORMULARIO DE PAGO -->
+    <section class="cart-products form-container">
+      <h2>Información de Pago</h2>
+      <p style="color: var(--color-text-muted); margin-bottom: 1rem;">
+        Elige el método de pago que prefieras y confirma tu pedido.  
+        Tu información se mantendrá segura en todo momento.
+      </p>
+
+      <form action="#" method="post">
+        <!-- Nombre completo -->
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ejemplo: Juan Pérez" required class="search-bar">
+
+        <!-- Correo -->
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="Ejemplo: juanperez@email.com" required class="search-bar">
+
+        <!-- Método de pago -->
+        <label for="metodo">Método de pago</label>
+        <select id="metodo" name="metodo" class="filter-dropdown" required>
+          <option value="">-- Selecciona un método --</option>
+          <option value="paypal">PayPal</option>
+          <option value="tarjeta">Tarjeta de Crédito / Débito</option>
+          <option value="efectivo">Pago en Efectivo</option>
+        </select>
+
+        <!-- Botones -->
+        <div class="acciones" style="margin-top: 1.5rem;">
+          <a href="cliente_carrito.html" class="button button--primary" style="background-color: var(--color-secondary);">
+            ⬅ Volver al carrito
+          </a>
+          <button type="submit" class="button button--primary">Confirmar y Pagar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- 💳 RESUMEN FINAL DE COMPRA -->
+    <aside class="cart-summary">
+      <h2 class="cart-summary__title">Resumen de tu Compra</h2>
+
+      <div class="cart-summary__line">
+        <span>Subtotal</span>
+        <span>S/ 20.00</span>
+      </div>
+      <div class="cart-summary__line">
+        <span>Envío</span>
+        <span>S/ 5.00</span>
+      </div>
+      <div class="cart-summary__line cart-summary__total">
+        <span>Total a pagar</span>
+        <span>S/ 25.00</span>
+      </div>
+
+      <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-top: 1rem;">
+        Al confirmar el pago, aceptas nuestros términos y condiciones.
+      </p>
+    </aside>
+
+  </main>
+</body>
+</html>
